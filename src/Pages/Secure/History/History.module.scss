@@ -1,0 +1,316 @@
+@import "../../../Global/Variables.scss";
+
+.his_d,
+.his_l {
+  background-color: $light;
+
+  nav {
+    background-color: $nbc_l;
+  }
+
+  .his_wrapper{
+    padding: 0 1rem;
+    .note{
+      font-size: 14px;
+      color: $fail;
+      font-weight: 500;
+      margin-bottom: 0;
+      margin-left: .5rem;
+      margin-top: 2rem;
+      display: none;
+  }
+  }
+
+  .his {
+    background-color: $fees_l;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+
+    .table{
+      overflow: auto;
+    }
+
+    .nevi{
+      background-color: $btnbg;
+      cursor: pointer;
+      color: $light;
+      padding: .3rem;
+      font-size: 18px;
+      border-radius: .2rem;
+      transform: translateX(-50%);
+      position: relative;
+      z-index: 2;
+
+      &:first-child{
+          transform: translateX(50%);
+      }
+    }
+    .sf{
+      display: flex;
+    }
+    .slider{
+      width: calc( 100% - 230px );
+      display: flex;
+      align-items: center;
+      padding-left: .5rem !important;
+    }
+    .options{
+        width: 100%;
+        max-width: 800px;
+        margin-left: 0;
+        .start{
+          display: flex ;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        .active,.btno{
+            width: fit-content;
+            height: fit-content;
+            padding: .2rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span{
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-right: .2rem;
+            }
+        }
+        .btno{
+            background: none;
+            color: $gray;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            transition: $t_normal;
+
+            &:hover{
+              color: $active_link;
+            }
+        }
+    }
+
+    .filters {
+      margin-right: 1rem;
+      @media screen and (max-width : 590px) {
+        margin: 0;
+        margin-left: 1rem;
+      }
+
+      h3 {
+        font-size: 16px;
+        color: $gray;
+        font-weight: 500;
+      }
+
+      .sbox {
+        padding-right: 0.2rem;
+        background-color: $fees_l_h;
+        margin-left: 0.5rem;
+        select {
+          background-color: transparent;
+          color: $gray;
+          padding: 0.2rem;
+          border: none;
+          outline: none;
+        }
+      }
+
+    
+    }
+  }
+
+  thead,
+  tbody,
+  tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    transition: $t_normal;
+  }
+  thead {
+    background-color: $fees_l_h;
+    padding-left: 1rem;
+    border-radius: inherit;
+  }
+
+  tbody {
+    display: block;
+    overflow: auto;
+    table-layout: fixed;
+    // max-height: 900px;
+  }
+
+  table {
+    width: 100%;
+    min-width: 1230px;
+    background-color: $fees_l;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: $t_normal;
+    th {
+      text-align: left;
+      font-size: 14px;
+      font-weight: 500;
+      color: $link;
+      &:first-child {
+        transform: translateX(-3px);
+      }
+    }
+    tr {
+      font-size: 14px;
+      font-weight: 500;
+      color: $gray;
+      border-spacing: 0 0.2rem;
+      td {
+        padding: 1rem;
+        border-bottom: 0.1px solid $l_ph;
+        &:last-child {
+          padding-left: 0;
+        }
+        // img {
+        //   width: 30px;
+        //   margin-right: 0.5rem;
+        // }
+        button {
+          font-size: 14px;
+          font-weight: 500;
+          color: $light;
+          background-color: $fail;
+          padding: 0.3rem 1rem;
+          border-radius: 0.5rem;
+          border: none;
+          outline: none;
+
+          &:first-child {
+            background-color: $depo;
+          }
+        }
+      }
+    }
+  }
+  .nodata{
+    height: 100%;
+    background-color: $light;
+    padding: 2rem 0;
+    border-radius: .5rem;
+    img{
+        height: 300px;
+        border-radius: 50%;
+    }
+    h1{
+        font-size: 20px;
+        color: $link;
+        font-weight: 500;
+        margin-top: 1rem;
+    }
+  }
+}
+
+// ****** Dark mode ******
+
+.his_d {
+  background-color: $cb_d;
+  nav {
+    background-color: $register_d;
+  }
+
+  .his {
+    background-color: $cb_d !important;
+    border: 0.1px solid $ex_border_d;
+
+    .btno{
+        color: $light !important;
+    }
+
+    h3{
+      color: $third !important;
+    }
+  }
+
+  table {
+    background-color: $cb_d !important;
+    thead {
+      background-color: $fees_d_h !important;
+      th {
+        color: $light !important;
+      }
+    }
+
+    td {
+      border-color: $ex_border_d !important;
+      color: $third;
+    }
+  }
+  .nodata{
+    background-color: transparent;
+    h1{
+      color: $light;
+    }
+  }
+}
+
+// ********** Responsive************
+
+@media screen and (max-width:425px){
+  .his_d,.his_l{
+    .pages{
+      .pagesArea{
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width:1280px){
+  .his_d,
+  .his_l {
+    .his_wrapper {
+      .slider{
+        padding-left: 0;
+      }
+      .note{
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1176px){
+  .his_d,
+  .his_l {
+    .his_wrapper {
+      .slider{
+        padding-left: 0 !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:770px){
+  .his_d,
+  .his_l {
+    .his_wrapper {
+      .his{
+        padding: 0 ;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:590px){
+  .his_d,
+  .his_l {
+    .his_wrapper {
+      .slider{
+        width: 100%;
+      }
+      .sf{
+        display: block ;
+      }
+    }
+  }
+}

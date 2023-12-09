@@ -1,0 +1,254 @@
+@import "../../../Global/Variables.scss";
+
+.bankdetials_d,
+.bankdetials_l {
+  background-image: url("../../../Assets/hero_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .warning_note , .warning_note2{
+    width: 100%;
+    padding-left: 1rem;
+    text-align: left;
+    position: absolute;
+    font-size: 14px;
+    color: $neg;
+    bottom: -4px;
+    background-color: $insidebox2;
+    z-index: 9;
+    border-radius: 0 0 .5rem .5rem;
+    margin: 0;
+  }
+  .warning_note2{
+    position: relative;
+    top: -37px;
+  }
+
+  nav {
+    background-color: $light;
+  }
+
+  ._bankdetials {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    min-height: 700px;
+    position: relative;
+
+    h1 {
+      font-size: 30px;
+      font-weight: 600;
+      text-align: center;
+      color: $link;
+      width: 100%;
+    }
+    h4 {
+      font-size: 18px;
+      width: 100%;
+      text-align: center;
+      color: $gray;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+
+    h6 {
+      font-size: 14px;
+      font-weight: 500;
+      margin: 0.5rem 0;
+      color: $umt;
+    }
+    .warn {
+      color: $fail;
+    }
+
+    form {
+      background-color: $formp_l;
+      box-shadow: 0 15px 30px rgb(85 85 85 / 40%);
+      padding: 2rem;
+      border-radius: 1rem;
+      position: relative;
+      z-index: 2;
+
+      .cheks {
+        flex-wrap: wrap;
+        label {
+          cursor: pointer;
+          margin-right: 1rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          color: $gray;
+        }
+        input {
+          margin-right: 1rem;
+          cursor: pointer;
+        }
+      }
+
+      .twoinput,
+      .threeinput {
+        width: 100%;
+        .inbox {
+          position: relative;
+          width: 49%;
+          input{
+            width: 100%;
+          }
+        }
+      }
+
+      .threeinput {
+        .inbox {
+          position: relative;
+          width: calc((100% / 3) - 5px);
+          input{
+            width: 100%;
+          }
+        }
+      }
+
+      input {
+        width: 100%;
+        background-color: $light;
+        color: $gray;
+        font-size: 14px;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 0.5rem;
+        margin: 0.5rem 0;
+        outline: none;
+        &::placeholder {
+          color: $l_ph;
+        }
+      }
+      .sbox {
+        padding-right: 1rem;
+        background-color: $light;
+        border-radius: 0.5rem;
+        width: 100%;
+      }
+
+      .sc {
+        width: 100%;
+        .sbox {
+          width: 49%;
+        }
+        input {
+          width: 49%;
+        }
+      }
+
+      .dragBoxes , .dragBoxes2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+
+        h5 {
+          font-size: 16px;
+          margin-top: 1.5rem;
+          font-weight: 500;
+          color: $gray;
+        }
+
+        .dragbox {
+          position: relative;
+          width: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 200px;
+          border-radius: 0.5rem;
+          border: 2px dashed $l_ph;
+          margin: 1rem 0;
+        }
+      }
+
+      .dragBoxes2{
+        grid-template-columns: repeat(2 , 1fr);
+      }
+    }
+
+    .bankdetials_btn {
+      margin-top: 1rem;
+      border-radius: 2rem;
+    }
+  }
+
+  .bgi {
+    width: 60%;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// ******* Dark mode ********
+
+.bankdetials_d {
+  background-image: url("../../../Assets/hero_dark_bg.png");
+  nav {
+    background-color: $register_nav;
+  }
+  ._bankdetials {
+    form {
+      background-color: $formp_d;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.273);
+      label {
+        color: $light !important;
+      }
+      h1,
+      .terms {
+        color: $light;
+      }
+      h4,
+      h5 {
+        color: $third !important;
+      }
+    }
+  }
+}
+
+// ****** Responsive ********
+
+@media screen and (max-width: 900px) {
+  .bankdetials_d,
+  .bankdetials_l {
+    .bgi {
+      width: 90%;
+    }
+    .dragBoxes , .dragBoxes2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bankdetials_d,
+  .bankdetials_l {
+    form {
+      padding: 1rem !important;
+      .twoinput,
+      .threeinput {
+        flex-direction: column;
+        .inbox{
+          width: 100% !important;
+          input {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .bankdetials_d,
+  .bankdetials_l {
+    .dragBoxes , .dragBoxes2 {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}

@@ -1,0 +1,213 @@
+@import "../../Global/Variables.scss";
+
+.news_d,.news_l{
+    nav{
+        background-color: $fees_l;
+      }
+
+      .news{
+        min-height: 100vh;
+      }
+    .options , .mySwiper{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        button{
+            margin-right: 1.5rem;
+            background: none;
+            outline: none;
+            border: none;
+            border-radius: 3rem;
+            font-size: 16px;
+            color: $link;
+            transition: $t_normal;
+            font-weight: 500;
+            padding: .2rem 1rem;
+            width: fit-content;
+            height: fit-content;
+            border: none;
+
+
+            &:hover{
+                color: $active_link;
+            }
+        }
+
+        .coin{
+            background-color: $btnbg !important;
+            color: $light;
+            padding: .2rem 1rem;
+            width: fit-content;
+            height: fit-content;
+            border-color: transparent !important;
+            &:hover{
+                color: $light;
+            }
+        }
+    }
+    .newsS{
+        display: none;
+        color: $light;
+        background-color: $btnbg;
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+
+    .mySwiper{
+        height: 50px;
+        display: none;
+        margin-left: 0.5rem;
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+    }
+
+    .boxes{
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        grid-gap: 1rem;
+        margin-bottom: 2rem;
+        .box ,.boxn{
+            background-color: $light;
+            box-shadow: 0 15px 30px rgb(85 85 85 / 20%);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+
+
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -75px;
+                right: -75px;
+                width: 150px;
+                height: 150px;
+                background-color: $nbc_l;
+                z-index: 0;
+                border-radius: 50% ;
+            }
+
+
+            img{
+                width: 100%;
+                border-radius: 1rem 1rem 0 0;
+            }
+            h3{
+                font-size: 16px;
+                margin-left: .5rem;
+                margin-top: .5rem;
+                font-weight: 600;
+                color: $link;
+            }
+            p{
+                font-size: 12px;
+                margin-bottom: 2rem;
+                margin-right: .5rem;
+                margin-left: .5rem;
+                color: $gray;
+                position: relative;
+                z-index: 1;
+            }
+            button{
+                background:none;
+                outline: none;
+                border: none;
+                color: $active_link;
+            }
+        }
+        .boxn{
+            &::after{
+                left: -75px;
+            }
+        }
+    }
+}
+
+// ***** Dark mode *********
+
+.news_d{
+    background-color: $cb_d;
+    nav{
+        background-color: $register_d;
+    }
+    .options , .mySwiper{
+        button{
+            color: $light;
+            &:hover{
+                color: $active_link_n;
+            }
+        }
+    }
+
+    .box,.boxn{
+        background-color: $nb_d !important;
+        border: .1px solid $gray;
+        h3{
+            color: $third !important;
+        }
+        p{
+            color: $light !important;
+        }
+        &:after{
+            background-color: $nbc_d !important;
+        }
+    }
+}
+
+
+// ********* Resposive ************
+
+@media screen and (max-width:1000px){
+    .boxes{
+        grid-template-columns: repeat(3 , 1fr) !important;
+    }
+  }
+
+  @media screen and (max-width:870px){
+    .options , .mySwiper{
+        button{
+            font-size: 12px !important;
+        }
+    }
+  }
+
+@media screen and (max-width:750px){
+    .options , .mySwiper{
+        button{
+            font-size: 12px !important;
+        }
+    }
+    .boxes{
+        grid-template-columns: repeat(2 , 1fr) !important;
+    }
+  }
+
+  @media screen and (max-width: 743px) {
+    .options , .mySwiper{
+        button{
+            margin-right: .5rem !important;
+        }
+    }
+  }
+
+  @media screen and (max-width:650px){
+    .options{
+        display: none !important;
+    }
+    .mySwiper,.newsS{
+        display: flex !important;
+    }
+    .mySwiper{
+        button{
+            border: 1px solid $gray !important;
+            background-color: none !important;
+        }
+    }
+    .boxes{
+        grid-template-columns: 1fr !important;
+    }
+  }
+
+

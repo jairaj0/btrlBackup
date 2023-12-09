@@ -1,0 +1,42 @@
+@import "../../Global/Variables.scss";
+
+.Coininfo_coininfo__Bo8HV .swiper-slide{
+    text-align: center;
+    border-right: 2px solid #c9c9c9;
+
+    button{
+        width: 100%;
+    }
+}
+
+.imported{
+    margin: 4rem 1rem;
+    h4,h2{
+        color: $link;
+            font-size: 25px;
+            margin-bottom: 1rem ;
+            margin-top: 2rem;
+    }
+
+    ul li{
+        list-style: none;
+    }
+}
+.imported_d{
+    margin: 4rem 1rem;
+    h4,h2{
+        color: $light;
+            font-size: 25px;
+            margin-bottom: 1rem ;
+            margin-top: 2rem;
+    }
+
+    a{
+        color: $btnbg;
+    }
+
+    ul li{
+        list-style: none;
+        color: $light;
+    }
+}

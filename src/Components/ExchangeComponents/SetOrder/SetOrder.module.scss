@@ -1,0 +1,200 @@
+@import "../../../Global/Variables.scss";
+
+.so_d,
+.so_l {
+  .warning_note{
+    font-size: 14px;
+    position: absolute;
+    bottom: 0px;
+    // bottom: -8px;
+    color: $neg;
+    background-color: $impn;
+    padding: 0 .5rem;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 .5rem .5rem;
+}
+  .trademode {
+    button {
+      width: 49%;
+      background-color: $so_bb_l;
+      color: $link;
+      border: none;
+      padding: 0.7rem;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 0.4rem;
+
+      &:last-child {
+        background-color: $so_sb_l;
+      }
+    }
+
+    .buybtn{
+        background-color: $so_bb_l_a;
+    }
+    .sellbtn{
+        background-color: $so_sb_l_a !important;
+    }
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: $link;
+    margin: 1rem 0;
+  }
+  .buy,
+  .amount, .total {
+    background-color: $tmb_bg_l;
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+    height: 60px;
+    border-radius: 0.5rem;
+    position: relative;
+    input {
+      width: 70%;
+      height: 100%;
+      outline: none;
+      background: none;
+      border: none;
+      font-size: 16px;
+      &::placeholder {
+        color: $l_ph;
+      }
+    }
+    h4 {
+      font-size: 14px;
+      font-weight: 500;
+      color: $l_ph;
+      span {
+        color: $gray;
+      }
+    }
+  }
+
+  .total{
+    input{
+      text-align: right;
+    }
+  }
+
+
+
+  .percents{
+    margin: 1rem 0;
+    button{
+        width: 80px;
+        border: none;
+        outline: none;
+        padding: .3rem 0;
+        background: $tmb_bg_l;
+        border-radius: .3rem;
+        transition: $t_normal;
+
+        &:hover{
+            background: $btnbg;
+            color: $light;
+        }
+    }
+
+    .active{
+        background: $btnbg;
+            color: $light;
+    }
+  }
+
+  .si{
+    width: 100%;
+    background-color: $so_bb_l_a;
+    color: $link;
+    border: none;
+    outline:  none;
+    font-size: 18px;
+    padding: .5rem 0;
+    border-radius: .5rem;
+  }
+
+  p,h3{
+    font-size: 14px;
+    color: $gray;
+    margin-top: .5rem;
+    margin-bottom: .8rem;
+  }
+  p{
+    margin-left: 1rem;
+  }
+  h3{
+    margin-right: 1rem;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+// ********** Dark mode **********
+
+.so_d{
+  // .warning_note{
+  //   background-color: $ex_grid_d;
+  // }
+  h2,p,h3{
+    color: $light;
+  }
+  .total{
+    color: $link;
+  }
+}
+
+
+
+// ******** Responsive ********
+
+@media screen and (max-width:1200px){
+  .so_d,
+.so_l{
+      grid-row-start: 2;
+      grid-column: 2 / span 2;
+  }
+}
+
+@media screen and (max-width:1330px){
+  .so_d,.so_l{
+      grid-row-start: 2;
+      grid-column-start: 2;
+  }
+}
+
+@media screen and (max-width:960px){
+  .so_d,.so_l{
+    .buy,
+  .amount, .total {
+    input{
+      width: 60%;
+    }
+  }
+  }
+}
+
+@media screen and (max-width:750px){
+  .so_d,.so_l{
+    grid-row-start: 2;
+    grid-column: 1 / span 3;
+}
+}
+
+@media screen and (max-width:400px){
+  .so_d,.so_l{
+    padding: .5rem !important;
+    input , h4{
+      font-size: 14px !important;
+    }
+    .percents{
+      button{
+        width: 60px;
+      }
+    }
+}
+}
+
+

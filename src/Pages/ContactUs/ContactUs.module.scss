@@ -1,0 +1,315 @@
+@import "../../Global/Variables.scss";
+
+.contact_d,
+.contact_l {
+  background-color: $cb_l;
+  .con_wrapper {
+    background: url("../../Assets/contactbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+  }
+  .content {
+    justify-content: space-between;
+    position: relative;
+    top: 50%;
+    transform: translateY(-40%);
+
+    .texts {
+      width: 50%;
+      transform: translateY(35%);
+      h1 {
+        font-size: 30px;
+        font-weight: 600;
+        color: $link;
+      }
+      p {
+        color: $neg;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 1rem 0;
+      }
+      h3 {
+        background-color: $light;
+        padding: 1rem;
+        color: $gray;
+        margin: 1rem 0;
+        border-radius: 0.5rem;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    form {
+      background-color: $r_form_l;
+      box-shadow: 0 15px 30px rgb(85 85 85 / 6%);
+      width: 45%;
+      min-width: 350px;
+      padding: 2rem;
+      border-radius: 1rem;
+
+      .warning_note {
+        padding-left: 0.5rem;
+        text-align: left;
+        position: relative;
+        font-size: 14px;
+        color: $neg;
+        top: -5px;
+        margin: 0;
+      }
+
+      h1,
+      p {
+        text-align: center;
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 25px;
+        color: $link;
+        font-weight: 600;
+      }
+      p {
+        font-size: 14px;
+        margin-bottom: 1rem;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        background-color: $light;
+        color: $gray;
+        font-size: 14px;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 0.5rem;
+        margin: 0.5rem 0;
+        outline: none;
+        border: 0.1px solid $tmb_bg_l;
+        &::placeholder {
+          color: $l_ph;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: 150px;
+        resize: none;
+      }
+
+      .register_btn {
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  .contact_info {
+    width: 100%;
+    background-color: $ci_l;
+    padding: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 2rem;
+
+    h1 {
+      font-size: 25px;
+      font-weight: 600;
+      color: $link;
+    }
+
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .box {
+      background-color: $cib_l;
+      padding: 1rem;
+      border-radius: 1rem;
+      position: relative;
+      p {
+        margin-top: 2rem;
+        color: $gray;
+      }
+
+      .icon {
+        background-color: $light;
+        font-size: 25px;
+        padding: 0.5rem;
+        border-radius: 50%;
+        position: absolute;
+        top: -15%;
+      }
+    }
+  }
+}
+
+// ********* Dark mode ********
+
+.contact_d {
+  background-color: $cb_d;
+
+  .con_wrapper {
+    background: url("../../Assets/contactbg_dark.png");
+  }
+  nav {
+    background-color: $register_nav;
+  }
+
+  form {
+    background-color: $r_form_d !important;
+    h1 {
+      color: $cmh_d !important;
+    }
+    p {
+      color: $light !important;
+    }
+  }
+
+  .contact_info {
+    background-color: $ci_d;
+    h1,
+    p,
+    .box {
+      color: $light;
+      p {
+        color: $light;
+      }
+    }
+    .box {
+      background-color: $cib_d;
+      .icon {
+        background-color: $btnbg;
+      }
+    }
+  }
+
+  .texts {
+    h1 {
+      color: $cmh_d !important;
+    }
+    h3 {
+      background-color: $ct_d !important;
+      border: 0.1px solid $gray !important;
+      color: $light !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contact_d,
+  .contact_l {
+    .texts {
+      width: 48% !important;
+    }
+    form {
+      width: 50% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contact_d,
+  .contact_l {
+    .con_wrapper {
+      height: 100%;
+    }
+    .content {
+      flex-direction: column;
+      top: 0;
+      transform: none;
+      padding: 3rem 2rem !important;
+      align-items: center;
+    }
+    .texts {
+      width: 100% !important;
+      margin-bottom: 3rem;
+    }
+    form {
+      width: 80% !important;
+    }
+
+    .contact_info {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      .boxes {
+        grid-template-columns: 1fr;
+
+        .box {
+          margin: 1rem 0;
+          height: 120px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .contact_d,
+  .contact_l {
+    .content {
+      padding: 3rem 1rem !important;
+    }
+
+    form {
+      width: 100% !important;
+    }
+
+    .contact_info {
+      width: 100%;
+      .boxes {
+        .box {
+          margin: 1rem 0;
+          height: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .contact_d,
+  .contact_l {
+    .content {
+      .texts {
+        h1 {
+          font-size: 25px;
+        }
+        p {
+          font-size: 16px;
+        }
+        h3 {
+          font-size: 14px;
+        }
+      }
+    }
+
+    form {
+      width: 100% !important;
+    }
+
+    .contact_info {
+      width: 100%;
+      padding: 1rem !important;
+      border-radius: 0.5rem;
+      h1 {
+        font-size: 18px !important;
+      }
+      .boxes {
+        .box {
+          margin: 1rem 0;
+          height: 90%;
+          p {
+            font-size: 12px !important;
+          }
+        }
+      }
+    }
+  }
+}

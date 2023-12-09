@@ -1,0 +1,66 @@
+@import '../../Global/Variables.scss';
+
+.exchange_d,.exchange_l{
+    background-color: $ex_bg;
+    overflow-x: hidden;
+
+    *{
+        -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+    }
+
+    // -------- modified 
+    nav > div:first-child , footer > div:first-child{
+        max-width: 100%;
+        justify-content: space-between;
+    }
+    footer > div:first-child > div:first-child{
+        grid-template-columns: repeat(6 , 1fr);
+        width: 400px;
+        img{
+            grid-column: 1/span 6;
+        }
+    }
+        // -------- modified 
+    .exchange_grids{
+        display: grid;
+        grid-template-columns: 350px auto 350px;
+        grid-gap: .5rem;
+        padding: 1rem;
+        section{
+            border: 1px solid $ex_border;
+            height: 500px;
+            border-radius: .3rem;
+            padding: 1rem;
+        }
+    }
+}
+
+// ********** Dark mode **********
+
+.exchange_d{
+    background-color: $secureddbg;
+    .exchange_grids{
+        section{
+            background-color: $ex_grid_d;
+            color: $light;
+            border-color: $ex_border_d;
+        }
+    }
+}
+
+// ******* Responsive *********
+
+@media screen and (max-width:740px){
+    .exchange_grids{
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media screen and (max-width:500px){
+    .exchange_grids{
+        padding: .5rem !important;
+    }
+}
+

@@ -1,0 +1,95 @@
+@import "../../../Global/Variables.scss";
+
+.umm_d,.umm_l{
+    background-color: $fees_l;
+    nav{
+        background-color: $light;
+      }
+
+      .umm{
+        background-color: $light;
+        height: 700px;
+        h1{
+            color: $umt;
+            font-size: 50px;
+        }
+        img{
+            width: 500px;
+            margin-top: 1rem;
+        }
+      }
+}
+
+
+// ***** Dark mode ******
+
+.umm_d{
+    background-color: $nbc_d;
+    nav{
+        background-color: $register_d;
+    }
+    .umm{
+        background-color: $cb_d ;
+    }
+}
+
+
+// ***** Dark mode ******
+
+.umm_d{
+    background-color: $nbc_d;
+    nav{
+        background-color: $register_d;
+    }
+    p{
+        color: $third !important;
+        a{
+            color: $active_link;
+        }
+    }
+    .umm{
+        background-color: $cb_d ;
+    }
+}
+
+
+// ******** Responsive *********
+
+@media screen and (max-width:670px){
+    .umm_d,.umm_l{
+        .umm{
+            h1{
+                font-size: 40px;
+            }
+            img{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:550px){
+    .umm_d,.umm_l{
+        .umm{
+            h1{
+                font-size: 30px;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:400px){
+    .umm_d,.umm_l{
+        .umm{
+            height: 500px;
+            h1{
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+
+
+

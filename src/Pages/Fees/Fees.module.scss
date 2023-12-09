@@ -1,0 +1,179 @@
+@import '../../Global/Variables.scss';
+
+.fees_d,.fees_l{
+    background-color: $light;
+      // -------- modified 
+      nav{
+        background-color: $fees_l;
+      }
+      nav > div:first-child , footer > div:first-child{
+        max-width: 100%;
+        justify-content: space-between;
+    }
+    footer > div:first-child > div:first-child{
+        grid-template-columns: repeat(6 , 1fr);
+        width: 400px;
+        img{
+            grid-column: 1/span 6;
+        }
+    }
+        // -------- modified 
+
+        .note{
+            font-size: 14px;
+            margin: 1rem;
+            color: $fail;
+            font-weight: 500;
+            margin-bottom: 0;
+            margin-left: 2rem;
+            display: none;
+        }
+
+        .tabs{
+            padding: 1rem ;
+            button{
+                width: 50%;
+                background-color: transparent;
+                color: $l_mode;
+                font-weight: 600;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                padding: .5rem 0;
+                border-bottom: 2px solid transparent;
+                transition: $t_normal;
+
+                @media screen and (max-width : 650px) {
+                    font-size: 14px;
+                }
+                @media screen and (max-width : 450px) {
+                    font-size: 12px;
+                }
+                @media screen and (max-width : 400px) {
+                    font-size: 10px;
+                }
+            }
+            .active{
+                color: $link;
+                border-right: none;
+                border-bottom: 2px solid $btnbg;
+                background-color: $fees_l;
+                }
+        }
+
+        .fees_wrapper{
+            padding: 1rem;
+            overflow: auto;
+
+            table{
+                min-width: 1350px !important;
+            }
+
+            thead, tbody, tr {
+                display: table;
+                width: 100%;
+                table-layout: fixed;
+              }
+              thead{
+                background-color: $fees_l_h;
+                padding: 0 .5rem;
+                border-radius: inherit;
+              }
+              
+              tbody {
+                display: block;
+                overflow: auto;
+                table-layout: fixed;
+                max-height: 700px;
+                min-height: 500px;
+                // max-height: calc( 100vh - 200px);
+              }
+            
+              table{
+                width: 100%;
+                background-color: $fees_l;
+                padding: .5rem;
+                border-radius: .5rem;
+                th{
+                    text-align: left;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $link;
+                    &:first-child{
+                        transform: translateX(-3px);
+                    }
+                }
+                tr{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $gray;
+                    border-spacing: 0 .2rem;
+                    td{
+                        padding: .5rem;
+                        border-bottom: .1px solid $l_ph;
+                    }
+                    .first,.second,.third{
+                        span{
+                            padding: .2rem .5rem;
+                            position: relative;
+                            right: 8px;
+                            border-radius: .5rem;
+                            color: $link;
+                        }
+                    }
+                    .first span{
+                        background-color: $first;
+                    }
+                    .second span{
+                        background-color: $second;
+                    }
+                    .third span{
+                        background-color: $third;
+                    }
+                }
+              }
+        }
+}
+
+// ********** Dark Mode *****
+
+.fees_d{
+    background-color: $cb_d;
+    nav{
+        background-color: $register_d;
+    }
+    .tabs{
+        .active{
+            background-color: $register_d;
+            color: $light;
+        }
+    }
+    table{
+        background-color: $cb_d !important;
+        border: .1px solid $ex_border_d;
+
+        thead{
+            background-color: $fees_d_h !important;
+            th{
+                color: $light !important;
+            }
+        }
+
+        td{
+            border-color: $ex_border_d !important;
+            color: $third;
+        }
+    }
+}
+
+
+
+// ********** Responsive************
+
+@media screen and (max-width:1382px){
+.fees_d,.fees_l{
+    .note{
+        display: block;
+    }
+}
+}

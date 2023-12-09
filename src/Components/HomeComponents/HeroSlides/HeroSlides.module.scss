@@ -1,0 +1,24 @@
+@import "../../../Global//Variables.scss";
+
+.sliders{
+  margin-top: 5rem !important;
+    .swiper-wrapper{
+        transition-timing-function : linear;
+      }
+}
+
+
+.perslide{
+  border: 1px solid $btnbg;
+  padding: .3rem;
+  width: 300px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  img{
+    width: 100%;
+    border-radius: 1.8rem;
+  }
+}

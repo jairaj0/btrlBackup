@@ -1,0 +1,223 @@
+@import '../../../Global/Variables.scss';
+
+.withdraw_d , .withdraw_l{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .dbox{
+        border: 2px solid $gray;
+        border-radius: .5rem;
+        cursor: pointer;
+        width: 90%;
+        padding: .5rem 1rem;
+        padding-right: 1rem;
+        margin-top: 1rem;
+        .chainOpt{
+            cursor: pointer;
+            width: 100%;
+            outline: none;
+            font-size: 18px;
+            border: none;
+          }
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 1rem;
+        width: 90%;
+        .qrReader{
+          position: absolute;
+          width: 250px;
+          height: 250px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50% , -50%);
+          z-index: 999;
+          background-color: #000;
+
+          @media screen and (max-width : 350px) {
+            transform: translate(-50% , -30%);
+          }
+        }
+
+        ._address{
+          width: 100%;
+           span{
+            font-size: 30px;
+            margin-left: 1rem;
+            cursor: pointer;
+            transition: $t_normal;
+
+            &:hover{
+              opacity: 0.5;
+            }
+           }
+        }
+
+        .wfi{
+          background-color: $light;
+          position: fixed;
+          z-index: 10;
+          box-shadow: 0 15px 30px rgb(85 85 85 / 40%);
+          padding-bottom: .5rem;
+          border-radius: .5rem;
+
+          h2{
+            padding: .5rem 1rem;
+            background-color: $btnbg;
+            color: $light;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: .5rem .5rem 0 0;
+            span:nth-child(2){
+              margin-left: 1rem;
+              cursor: pointer;
+              font-weight: 600;
+              transition: $t_normal;
+              &:hover{
+                opacity: 0.8;
+              }
+            }
+          }
+
+          .wfi_row{
+            margin: .3rem 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $ex_border;
+            padding: .3rem 0;
+          }
+        }
+
+        button{
+            transition: $t_normal;
+        }
+
+        button:hover{
+            opacity: 0.8;
+        }
+
+        .otp{
+          @media screen and (max-width : 480px) {
+            flex-direction: column;
+            button{
+              margin-left: 0 !important;
+              width: 100% !important;
+            }
+          }
+        }
+
+        .row{
+            width: 100%;
+
+            &:nth-child(2){
+              @media screen and (max-width : 480px) {
+                display: grid;
+                grid-template-columns: 50px 1fr 1fr 1fr;
+                justify-items: end;
+                h3{
+                  width: 50px;
+                }
+                input{
+                  grid-column: 2 / span 3;
+                }
+                button{
+                  width: 100%;
+                  margin: 0;
+                  grid-column: 1 / span 2;
+                }
+                button:nth-child(4){
+                  width: calc( 100% - 50px );
+                  grid-column: 3 / span 2;
+                }
+              }
+            }
+
+            button{
+                background-color: $depo;
+                width: fit-content;
+                padding: .5rem 1rem;
+                margin-left: .5rem;
+                transition: $t_normal;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+            h3{
+              background-color: $tmb_bg_l;
+              padding: .5rem;
+              color: $link;
+              font-size: 16px !important;
+          }
+        }
+
+
+  
+        .warning_note {
+          width: 100%;
+          padding-left: 0.5rem;
+          text-align: left;
+          position: relative;
+          font-size: 14px;
+          color: $neg;
+          top: -5px;
+          margin: 0;
+        }
+  
+        input,
+        button {
+          margin: 0.5rem 0;
+          width: 100%;
+          padding: 0.5rem;
+          font-size: 14px;
+          border: 1.47px solid $ex_border;
+          outline: none;
+        }
+  
+
+  
+        button {
+          color: $light;
+          background-color: $btnbg;
+          border: none;
+          outline: none;
+          border-radius: 0.3rem;
+          font-weight: 500;
+        }
+      }
+}
+
+
+// ********* Dark mode *******
+
+.withdraw_d{
+  .dbox{
+    background-color: $light;
+    background-color: transparent;
+    border-color: $light;
+    select{
+      background-color: transparent;
+      color: $light;
+    }
+  }
+  form{
+    ._address{
+      span{
+        color: $light;
+      }
+    }
+      .row{
+        h3{
+          color: $link !important;
+        }
+      }
+  }
+}
+

@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "./Variables.scss";
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.column {
+  flex-direction: column;
+}
+button {
+  cursor: pointer;
+}
+
+button.btn,
+button.btns {
+  border: none;
+  outline: none;
+  color: $light;
+  font-size: 14px;
+  font-weight: 600;
+  width: 120px;
+  height: 40px;
+  border-radius: 3rem;
+  transition: $t-normal;
+  background: $btnbg;
+  box-shadow: $btnshadow;
+
+//   &:hover {
+//     color: $link;
+//     background: $btnbg1;
+//     box-shadow: $btn1shadow;
+//   }
+}
+
+button.btns {
+  background: $btnbg1;
+  box-shadow: $btn1shadow;
+  color: $btn1color;
+  margin-left: 2rem;
+
+  &:hover {
+    color: $light;
+    background: $btnbg;
+    box-shadow: $btnshadow;
+  }
+}
+
+input:-webkit-autofill , input:-webkit-autofill:focus{
+  box-shadow:0 0 0 50px white inset;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+select{
+  background-image: url("https://www.svgrepo.com/show/354961/down.svg") ;
+         background-repeat: no-repeat;
+         background-position: 100% 50% ;
+         background-size: 12px;
+         font-size: 14px;
+-moz-appearance: none; 
+-webkit-appearance: none; 
+appearance: none;
+padding-right: 15px !important;
+}
+
+input[type="radio"]{
+  width: min-content !important;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  // height: inherit;
+  padding: 0 2rem;
+  @media screen and (max-width:950px){
+    padding: 0 1rem !important;
+  }
+}
+
+
+
+@media screen and (max-width: 750px) {
+  .container {
+    max-width: 100vw;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    max-width: 100vw;
+    padding: 0;
+  }
+}
+
+.PhoneInputCountryIcon{
+  box-shadow: none;
+  background: none ;
+  width: 100%;
+  height: 25px;
+  margin-right: .5rem;
+  img{
+    width: 100%;
+  }
+}
+
+.PhoneInputCountryIconImg{
+  width: 100% !important;
+}
+
+.PhoneInput{
+  width: 100%;
+
+  .PhoneInputCountry{
+    width: 40px;
+    background: none;
+    pointer-events: none;
+    cursor: default;
+    outline: none;
+    border: none;
+  }
+  &::after{
+    content: "";
+    width:40px;
+    height: 50px;
+    position: absolute;
+    background-color: transparent;
+    pointer-events: none;
+    cursor: default;
+    outline: none;
+    border: none;
+    z-index: 3;
+  }
+}
+
+.PhoneInputCountrySelectArrow{
+  display: none !important;
+}
+
+.tgb{
+    background-color: $so_bb_l_a !important;
+}
+.popup{
+    padding: .5rem 1rem !important;
+    width: fit-content !important;
+}
+
+.htmlContainer{
+    margin: 0 !important;
+    font-size: 14px;
+}
+
+
+
+
+
+// ******** By Bharat bhaia **********
+
+
+.sn_page_pad {
+  padding: 50px 0px;
+}
+.sn_page_pad h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.sn_page_pad h3 {
+
+  margin-top: 15px;
+} 
+ol.topli {
+    list-style-type: none;
+    counter-reset: subsection;
+}
+ol.topli>li>h2::before {
+    counter-increment: subsection;
+    content: counters(subsection,'.') '.';
+    padding-right: 0.3em;
+}
+
+.sn_page_pad li, .sn_page_pad p{
+  font-size: 14px;
+  margin-top: 10px;
+}
+.sn_page_pad ol {
+  padding-left:20px;
+}
+@media screen and (max-width: 750px) {
+
+  .sn_page_pad h1 {
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 10px;
+  }
+  .sn_page_pad h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-top: 17px;
+  }
+  .sn_page_pad {
+      padding: 30px 0px;
+  }
+}

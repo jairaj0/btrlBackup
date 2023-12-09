@@ -1,0 +1,214 @@
+@import "../../../Global/Variables.scss";
+
+.mm_d , .mm_l{
+    .tmmm{
+        display: none;
+        overflow: scroll;
+        padding: .5rem 1rem;
+        h5,p{
+            font-size: 14px;
+            font-weight: 500;
+            color: $gray;
+        }
+        div{
+            margin-right: 1rem;
+        }
+    }
+    .grids{
+        display: grid;
+        grid-template-columns: repeat(6 , 1fr);
+        margin: 1rem;
+        padding-bottom: .3rem;
+        grid-row-gap: .5rem;
+        margin-bottom: .5rem;
+        border-bottom: .1px solid $ex_border;
+
+        h2{
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        h5,p{
+            font-size: 14px;
+            font-weight: 500;
+            color: $gray;
+        }
+        p{
+            color: $link;
+            font-weight: 400;
+        }
+
+        .grid_c{
+            grid-column: 1 / span 3 ;
+            button{
+                background: none;
+                border: none;
+                outline: none;
+                margin-right: 1rem;
+                img{
+                    width: 30px;
+                    margin-right: .5rem;
+                }
+                h1{
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $gray;
+                }
+                .arrow{
+                    font-size: 18px;
+                    color: $link;
+                    margin-left: .5rem;
+                    display: none;
+                }
+            }
+        }
+        .grid_v{
+            grid-row-start: 1;
+            grid-column: 4 / span 3 ;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .respv{
+                display: none;
+                width: 100%;
+                align-items: flex-start;
+
+                
+
+                .pandc{
+                    margin-right: 1rem;
+                }
+                p{
+                    font-size: 14px;
+                }
+                .resv{
+                    p{
+                        font-weight: 500;
+                    }
+                    span{
+                        font-size: 14px;
+                        display: flex;
+                    }
+                }
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// ********** Dark mode **********
+
+.mm_d{
+        .grids{
+            border-bottom-color: $ex_border_d;
+            h5,p{
+                color: $third !important;
+            }
+            .grid_c{
+                button{
+                    h1{
+                        color: $light ;
+                    }
+                    .arrow{
+                        color: $light ;
+                    }
+                }
+            }
+            .grid_v{
+                .respv{
+                    h5{
+                        color: $third;
+                    }
+                    p{
+                        color: $light !important;
+                    }
+                }
+            }
+        }
+        .tmmm{
+            h5,p{
+                color: $third ;
+            }
+        }
+}
+
+// ************** Responsive **********
+
+
+
+@media screen and (max-width:968px){
+    .tmmm{
+        display: flex !important;
+        justify-content: space-around;
+        -ms-overflow-style: none;  
+        scrollbar-width: none;  
+
+        p{
+            font-weight: 500 !important;
+        }
+    &::-webkit-scrollbar { 
+        display: none;
+    }
+    }
+    .grids{
+        display: flex !important;
+        justify-content: space-between;
+        .rows{
+            display: none;
+        }
+        .grid_v{
+            overflow: scroll ;
+            display: block !important;
+            h2{
+                display: none;
+            }
+            .respv{
+                min-width: 420px ;
+                display: flex !important;
+            }
+        }
+}
+}
+
+@media screen and (max-width:1050px){
+    .grids{
+        .grid_c{
+            .arrow{
+                display: flex !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:750px){
+    .tmmm{
+        justify-content: flex-start !important;
+    }
+}
+
+@media screen and (max-width:630px){
+    .grid_v{
+        width: 350px;
+        -ms-overflow-style: none;  
+        scrollbar-width: none;  
+    &::-webkit-scrollbar { 
+        display: none;
+    }
+    }
+}
+
+@media screen and (max-width:530px){
+    .grid_v{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .grid_v{
+        width: 200px;
+    }
+}
+

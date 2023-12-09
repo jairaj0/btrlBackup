@@ -1,0 +1,242 @@
+@import "../../Global/Variables.scss";
+
+.register_d,
+.register_l {
+  background-image: url("../../Assets/hero_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  nav{
+    background-color: $light;
+  }
+
+  ._register {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      color: $link;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      background-color: $form_l;
+      box-shadow: 0 15px 30px rgb(85 85 85 / 6%);
+      width: 50%;
+      min-width: 350px;
+      padding: 2rem;
+      border-radius: 1rem;
+
+
+  .warning_note{
+    p{
+    position: relative;
+      font-size: 14px;
+      color: $neg;
+      top: -5px;
+    }
+  }
+
+      input, select,
+      .country {
+        width: 100%;
+        background-color: $light;
+        color: $gray;
+        font-size: 14px;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 0.5rem;
+        margin: 0.5rem 0;
+        outline: none;
+        &::placeholder {
+          color: $l_ph;
+        }
+      }
+      .country {
+        margin: 0;
+      }
+
+      .sbox {
+        padding-right: 1rem;
+        background-color: $light;
+        border-radius: 0.5rem;
+        width: 100%;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        select{
+          background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
+        height: 48px;
+        }
+      }
+
+      .sc {
+        width: 100%;
+        .sbox {
+          width: 49%;
+          margin: 0;
+        }
+        input {
+          width: 49%;
+        }
+      }
+      .password {
+        background-color: $light;
+        padding: 0 1rem;
+        border-radius: 0.5rem;
+        width: 100%;
+        margin: 0.5rem 0;
+        input {
+          margin: 0;
+          padding-left: 0;
+        }
+
+        .eye , .eyea {
+          background: none;
+          outline: none;
+          border: none;
+          font-size: 16px;
+          color: $l_ph;
+          transition: $t_normal;
+
+          &:hover {
+            color: $btnbg;
+          }
+        }
+        .eyea{
+            color: $btnbg;
+        }
+      }
+      .terms {
+        padding: 0 0.5rem;
+        margin: 1rem 0;
+        color: $gray;
+        input.box {
+          width: 50px;
+          height: 20px;
+          margin-right: 1rem;
+          cursor: pointer;
+        }
+        p{
+          a{
+            color: $btnbg;
+          }
+        }
+      }
+
+      .register_btn {
+        border-radius: 2rem;
+      }
+
+      .refer{
+        width: 100%;
+        margin-top: 1rem;
+
+        a{
+          font-size: 14px;
+          color: $link;
+          transition: $t_normal;
+
+          &:hover{
+            color: $btnbg;
+          }
+        }
+      }
+    }
+
+    img {
+      //   width: calc(90% - 500px);
+      width: 45%;
+    }
+  }
+}
+
+// *********** Dark mode *******
+
+.register_d {
+  background-image: url("../../Assets/hero_dark_bg.png");
+  nav{
+    background-color: $register_nav;
+  }
+  ._register {
+    form {
+      background-color: $form_d;
+      .refer{
+        a{
+          color: $light;
+        }
+      }
+      h1,
+      .terms {
+        color: $light;
+      }
+    }
+  }
+}
+
+
+
+
+// ********** Responsive *************
+
+@media screen and (max-width:900px){
+  ._register {
+    form{
+      width: 100% !important;
+      position: relative;
+      z-index: 2;
+    }
+    position: relative;
+    .bg{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      width: 70% !important;
+      transform: translate(-50% , -50%);
+      opacity: 0.3;
+    }
+  }
+}
+
+@media screen and (max-width:550px){
+  ._register{
+    form{
+      padding: 1.5rem 1rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  ._register{
+    form {
+      min-width: 100% !important;
+      width: 100% !important;
+      .refer{
+        a{
+          font-size: 12px !important;
+        }
+      }
+      .sc{
+        flex-direction: column;
+        margin: .5rem 0rem;
+        margin-bottom: 0;
+        .sbox{
+          width: 100% !important;
+        }
+        input{
+          width: 100% !important;
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+  }
+}

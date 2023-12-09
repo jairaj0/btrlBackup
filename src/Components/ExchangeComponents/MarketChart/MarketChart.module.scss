@@ -1,0 +1,26 @@
+@import '../../../Global/Variables.scss';
+
+
+.marketchart_d,.marketchart_l{
+    grid-column: span 2;
+    padding: 0 !important;
+
+    .chart{
+        height: calc(100% - 107px);
+    }
+}
+
+@media screen and (max-width:1330px){
+    .marketchart_d,.marketchart_l{
+        grid-row-start: 1;
+        grid-column: 1 / span 3;
+    }
+}
+
+
+@media screen and (max-width:968px){
+    .chart{
+        height: calc( 100% - 129px ) !important;
+    }
+}
+

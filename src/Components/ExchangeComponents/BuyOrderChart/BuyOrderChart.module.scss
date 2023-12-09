@@ -1,0 +1,89 @@
+@import "../../../Global/Variables.scss";
+
+.boc_d,.boc_l{
+
+    .title{
+        font-size: 16px;
+        font-weight: 600;
+        color: $bb3;
+    }
+
+      .c_table {
+        .tbody{
+          max-height: 410px;
+          overflow: auto;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+        .thead,
+        .tr {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          font-size: 14px;
+          font-weight: 600;
+          color: $gray;
+        }
+        .thead {
+          margin: 0.5rem 0;
+          div {
+            span{
+              font-size: 12px;
+            }
+            text-align: end;
+            &:first-child {
+                text-align: start;
+              }
+              &:last-child {
+                text-align: end;
+              }
+          }
+        }
+    
+        .tr {
+          p {
+            font-weight: 500;
+            font-size: 12px;
+            margin-bottom: 0.3rem;
+            text-align: end;
+            cursor: pointer;
+    
+            &:first-child {
+              text-align: start;
+            }
+            &:last-child {
+              text-align: end;
+            }
+          }
+        }
+        .price {
+            color: $bb3;
+        }
+      }
+}
+
+// ********* Dark mode *********
+
+.boc_d{
+    .c_table {
+        .thead,
+        .tr {
+          color: $insidebox1;
+        }
+        .thead{
+            color: $light;
+        }
+      }
+}
+
+
+// ****** Responsive ********
+
+@media screen and (max-width:740px){
+    .boc_d,.boc_l{
+        grid-row-start: 3;
+        grid-column: 1 / span 3;
+    }
+  }

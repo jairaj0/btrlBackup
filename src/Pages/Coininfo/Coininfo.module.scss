@@ -1,0 +1,88 @@
+@import "../../Global/Variables.scss";
+
+.coininfo_d,.coininfo_l{
+    nav{
+        background-color: $fees_l;
+      }
+
+      .nevi{
+        background-color: $btnbg;
+        cursor: pointer;
+        color: $light;
+        padding: .3rem;
+        font-size: 18px;
+        border-radius: .2rem;
+        transform: translateX(-50%);
+        position: relative;
+        z-index: 2;
+
+        &:first-child{
+            transform: translateX(50%);
+        }
+      }
+      
+      .mySwiper{
+        background-color: $third;
+        padding: 1rem 0;
+        border-radius: .5rem;
+        button{
+            color: $link;
+            background: none;
+            outline: none;
+            border: none;
+            font-weight: 500;
+        }
+        button.active{
+            color: $active_link;
+        }
+      }
+
+      .coininfo{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        h5{
+            font-weight: 500;
+            a{
+                color: $active_link;
+            }
+        }
+        h1{
+            color: $link;
+            font-size: 25px;
+            margin-bottom: 1rem ;
+            margin-top: 2rem;
+        }
+        img{
+            width: 500px;
+            margin-top: 1rem;
+        }
+      }
+}
+
+
+// ***** Dark mode ******
+
+.coininfo_d{
+    background-color: $cb_d;
+    nav{
+        background-color: $nbc_d;
+    }
+    .mySwiper{
+        background-color: $fees_d_h;
+        button{
+            color: $light;
+        }
+    }
+    .coininfo{
+        h1{
+            color: $third;
+        }
+        p{
+            color: $light;
+        }
+        h5{
+            color: $light;
+        }
+    }
+}
+

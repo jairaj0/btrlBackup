@@ -1,0 +1,153 @@
+@import "../../../Global/Variables.scss";
+
+.mh_d,.mh_l{
+
+    .title{
+        font-size: 16px;
+        font-weight: 600;
+        color: $fail;
+    }
+    // thead, tbody, tr {
+    //     display: table;
+    //     width: 106%;
+    //     table-layout: fixed;
+    //   }
+      
+    //   tbody {
+    //     display: block;
+    //     overflow: auto;
+    //     table-layout: fixed;
+    //     max-height: 410px;
+    //         -ms-overflow-style: none;  
+    //         scrollbar-width: none;  
+    //     &::-webkit-scrollbar { 
+    //         display: none;
+    //     }
+    //   }
+    
+    //   table{
+    //     width: 100%;
+    //     th{
+    //         text-align: left;
+    //         font-size: 14px;
+    //         font-weight: 600;
+    //         color: $ex_th_l;
+    //         &:first-child{
+    //             transform: translateX(-3px);
+    //         }
+    //     }
+    //     tr{
+    //         font-size: 12px;
+    //         font-weight: 500;
+    //         color: $gray;
+    //         border-spacing: 0 .2rem;
+    //        .pos{
+    //         color: $bb3;
+    //       }
+    //       .neg{
+    //         color: $neg;
+    //       }
+    //     }
+    //   }
+
+      .c_table {
+        .tbody{
+          max-height: 410px;
+          overflow: auto;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+        .thead,
+        .tr {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr) .6fr;
+          font-size: 14px;
+          font-weight: 600;
+          color: $gray;
+        }
+        .thead {
+          margin: 0.5rem 0;
+          div {
+            text-align: end;
+            span{
+              font-size: 12px;
+            }
+            &:first-child {
+                text-align: start;
+              }
+              &:last-child {
+                text-align: end;
+              }
+          }
+        }
+    
+        .tr {
+          p {
+            font-weight: 500;
+            font-size: 12px;
+            margin-bottom: 0.3rem;
+            text-align: end;
+            cursor: pointer;
+    
+            &:first-child {
+              text-align: start;
+            }
+            &:last-child {
+              text-align: end;
+            }
+          }
+        }
+        .neg {
+          color: $neg;
+        }
+        .pos {
+          color: $bb3;
+        }
+      }
+}
+
+// ********* Dark mode *********
+
+.mh_d{
+    .title{
+        color: $active_link_d;
+    }
+    .c_table {
+        .thead,
+        .tr {
+          color: $insidebox1;
+
+        }
+        .thead{
+            color: $light;
+        }
+      }
+}
+
+
+// ****** Responsive *********
+
+@media screen and (max-width:1200px){
+    .mh_d , .mh_l{
+        grid-row-start: 3 ;
+        grid-column-start: 2 ;
+    }
+}
+
+@media screen and (max-width:1050px){
+    .mh_d , .mh_l{
+        grid-row-start: 3 ;
+        grid-column: 2 / span 2 ;
+    }
+}
+
+@media screen and (max-width:740px){
+    .mh_d , .mh_l{
+        grid-row-start: 4;
+        grid-column: 1 / span 3;
+    }
+  }
+

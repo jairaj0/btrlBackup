@@ -1,0 +1,158 @@
+@import "../../../Global/Variables.scss";
+
+.l_footer,
+.d_footer {
+  background: $footer_l;
+  padding: 3rem 0;
+
+  .f_s_l {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 250px;
+
+    img {
+      grid-column: 1 / span 4;
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+
+    div {
+        margin-bottom: 1rem;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background-color: $movingshape;
+        color: $link;
+        border-radius: 50%;
+        transition: $t-normal;
+
+        &:hover{
+            background-color: $bgtext;
+            color: $light;
+        }
+      }
+    }
+  }
+
+  .f_links_grids{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    margin-left: 3rem;
+    grid-gap: 2rem;
+
+    .f_links_grid{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        
+
+        h3{
+            font-size: 16px;
+            font-weight: 600;
+            color: $link;
+            margin-bottom: 1rem;
+        }
+
+        a{
+            font-size: 14px;
+            color: $link;
+            font-weight: 400;
+            transition: $t-normal;
+            &:hover{
+                color: $bgtext1;
+            }
+        }
+    }
+  }
+}
+
+
+.l_copyright,.d_copyright{
+    text-align: center;
+    padding: .5rem 0;
+    color: $link;
+    background-color: $copyright_l;
+}
+
+@media screen and (max-width:1000px){
+  .l_footer,
+.d_footer {
+  .footer{
+    flex-direction: column;
+
+    .f_s_l{
+      grid-template-columns: repeat(6, 1fr);
+    width: 100% !important;
+
+    img{
+      grid-column: 1 / span 6;
+      width: 200px;
+    }
+    }
+    .f_links_grids{
+      margin-left: 0;
+      margin-top: 2rem;
+    }
+  }
+}
+}
+
+@media screen and (max-width:550px){
+  .l_footer,
+.d_footer {
+  .footer{
+    .f_s_l{
+      grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+
+    img{
+      grid-column: 1 / span 4;
+      width: 200px;
+    }
+  }
+    flex-direction: column;
+    .f_links_grids{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+}
+
+
+@media screen and (max-width:550px){
+  .l_footer,
+.d_footer {
+  .footer{
+    .f_links_grids{
+      grid-gap: 1rem;
+      .f_links_grid{
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+}
+
+// ------ Dark mode ---------
+
+.d_footer {
+  background: $footer_d;
+
+  .f_links_grids{
+    .f_links_grid{
+        h3,a{
+            color: $light;
+        }
+    }
+  }
+}
+
+.d_copyright{
+    color: $light;
+    background-color: $copyright_d;
+}

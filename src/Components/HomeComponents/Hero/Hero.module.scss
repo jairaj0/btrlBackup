@@ -1,0 +1,109 @@
+@import "../../../Global/Variables.scss";
+
+.l_hero , .d_hero{
+    background-image: url("../../../Assets/hero_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    .hero_content{
+        margin-top: 5rem;
+
+        .heroleft{
+            width: 600px;
+        }
+
+        p{
+            color: $btnbg;
+            font-weight: 500;
+            .line{
+                background-color: $btnbg;
+                min-width: 80px;
+                height: 1px;
+                margin-right: 1rem;
+            }
+        }
+    
+        h1{
+            color: $link;
+            font-size: 45px;
+            margin: 2rem 0;
+        }
+    
+        .hero_i{
+            width: 500px;
+        }
+    }
+   
+}
+
+@media screen and (max-width:950px){
+    .l_hero , .d_hero{
+        .heroleft{
+            width: 400px !important;
+            p{
+                .line{
+                    min-width: 35px ;
+                    margin-right: 4px;
+                }
+            }
+            h1{
+                font-size: 30px !important;
+            }
+        }
+        .hero_i{
+            width: 300px !important;
+        }
+    }
+}
+
+@media screen and (max-width:700px){
+    .l_hero , .d_hero{
+        .hero_content{
+            flex-direction: column-reverse;
+            .heroleft{
+                width: 100% !important;
+                margin-top: 2rem;
+                h1{
+                    font-size: 40px !important;
+                }
+            }
+            .hero_i{
+                width:70% !important;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:500px){
+    .l_hero , .d_hero{
+        .hero_content{
+            .hero_i{
+                width: 90%;
+            }
+           .heroleft{
+            h1{
+                font-size: 30px !important;
+            }
+           }
+        }
+    }
+}
+
+// ------------- Dark mode -----------
+
+.d_hero{
+    background-image: url("../../../Assets/hero_dark_bg.png");
+    .hero_content{
+        p{
+            color: $active_link_d;
+            .line{
+                background-color: $active_link_d;
+            }
+        }
+        h1{
+            color: $light;
+        }
+    }
+}

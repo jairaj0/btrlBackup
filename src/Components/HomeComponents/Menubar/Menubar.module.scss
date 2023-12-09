@@ -1,0 +1,145 @@
+@import '../../../Global/Variables.scss';
+
+.d_menu,.l_menu{
+    height: 100vh;
+    width: 700px;
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    top: 80px;
+    background-image: url('../../../Assets/hero_bg.png');
+    background-size: cover;
+    background-repeat:  no-repeat;
+    transition: all .5s ease-in-out;
+    z-index: 9;
+    padding-left: 3rem;
+
+    .m_navlinks,.login_m_navlinks{
+        margin-left: 1rem;
+        height: fit-content;
+
+        .losi{
+            margin-bottom: 2rem;
+            button{
+                display: block;
+                margin: 1rem 0;
+            }
+        }
+
+        .m_navlink{
+            margin-left: 1rem;
+            margin-bottom: 2rem;
+            color: $link;
+            transition: $t-normal;
+            font-weight: 600;
+            display: block ;
+
+            &:hover{
+                color: $active_link;
+            }
+        }
+
+        .m_active_nav_link{
+            color: $active_link;
+        }
+    }
+
+    .login_m_navlinks{
+        margin: 0 ;
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+
+        .m_navlink:nth-child(-n+4){
+            display: none;
+        }
+        button{
+            display: block;
+            background-color: $so_sb_l_a;
+            box-shadow: none;
+            width: fit-content;
+            height: fit-content;
+            padding: .2rem 1rem;
+            border-radius: .5rem;
+        }
+    }
+
+}
+
+
+
+// ********** Dark mode *********
+
+.d_menu{
+    background-image: url('../../../Assets/hero_dark_bg.png');
+
+    .m_navlink{
+        color: $light !important;
+
+        &:hover{
+            color: $active_link_d !important;
+        }
+    }
+
+    .m_active_nav_link{
+        color: $active_link_d !important;
+    }
+}
+
+
+// ********* Responsive *****
+
+@media screen and (max-width:750px){
+    .d_menu,.l_menu{
+        width: 100%;
+    }
+}
+@media screen and (max-width:696px) {
+    .d_menu,.l_menu{
+        .login_m_navlinks{
+            width: 100%;
+            .m_navlink:nth-child(-n+4){
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:590px) {
+    .d_menu,.l_menu{
+        .login_m_navlinks{
+            grid-template-columns: repeat(2 , 1fr);
+        }
+    }
+}
+
+@media screen and (max-width:445px) {
+    .d_menu,.l_menu{
+        .login_m_navlinks{
+            position: relative;
+            left: -40px;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .d_menu,.l_menu{
+        .login_m_navlinks{
+            .m_navlink{
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+    .m_navlinks{
+        .losi{
+            flex-direction: column;
+            button{
+                display: block;
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
+

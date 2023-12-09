@@ -1,0 +1,565 @@
+@import "../../../Global/Variables.scss";
+
+.reff_d,
+.reff_l {
+  background-color: $light;
+  nav {
+    background-color: $nbc_l;
+  }
+
+  .reff {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    
+
+    .impn {
+      h1 {
+        font-size: 25px;
+        font-weight: 500;
+        color: $link;
+      }
+      p {
+        background-color: $impnp1_l;
+        margin: 0.5rem 0;
+        color: $link;
+        font-size: 14px;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        &:nth-of-type(2) {
+          background-color: $impnp2_l;
+          color: $p2;
+        }
+      }
+    }
+    .il {
+      background-color: $fees_l;
+      padding: 2rem;
+      border-radius: 1rem;
+      h1 {
+        font-size: 25px;
+        color: $link;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+      h2 {
+        font-size: 14px;
+        font-weight: 400;
+        color: $gray;
+        padding: 0.5rem 2rem;
+        background-color: $impnp1_l;
+        border-radius: 0.5rem;
+
+        button {
+          background: none;
+          outline: none;
+          border: none;
+          font-size: 18px;
+          position: relative;
+          transition: $t_normal;
+          margin-left: 1rem;
+
+          &:hover {
+            color: $btnbg;
+          }
+
+          span {
+            color: $light;
+            font-size: 14px;
+            background-color: $gray;
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.2rem;
+            position: absolute;
+            bottom: -30px;
+            right: -25%;
+            width: fit-content;
+          }
+        }
+      }
+    }
+    h4 {
+      font-size: 18px;
+      font-weight: 500;
+      color: $link;
+      margin: 1rem 0;
+    }
+
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(6 , 1fr);
+      grid-gap: 1rem;
+      margin-bottom: 2rem;
+      .box {
+        background-color: $impnp1_l;
+        border-radius: 1rem;
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        p {
+          font-size: 16px;
+          color: $gray;
+        }
+        h1 {
+          font-size: 25px;
+          font-weight: 400;
+          color: $link;
+        }
+        &:nth-child(odd) {
+          background-color: $impnp2_l;
+        }
+      }
+    }
+
+    .sbox,
+    input {
+      width: 400px;
+      font-size: 16px;
+      outline: none;
+      padding: 0.5rem;
+      margin-right: 1rem;
+      border: 1px solid $l_ph;
+      border-radius: 0.5rem;
+      color: $gray;
+    }
+    .sbox {
+      padding-right: 1rem;
+      background-color: $light;
+      select {
+        background-color: inherit;
+        width: 100%;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: $gray;
+      }
+    }
+  }
+
+  .js {
+    align-items: flex-start;
+    margin: 1rem 0;
+
+    thead,
+    tbody,
+    tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+    thead {
+      background-color: $fees_l_h;
+      padding-left: 0.5rem;
+      border-radius: inherit;
+    }
+
+    tbody {
+      display: block;
+      overflow: auto;
+    }
+
+    table {
+      width: 400px;
+      background-color: $fees_l;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      th {
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        color: $link;
+        &:first-child {
+          transform: translateX(-3px);
+        }
+      }
+      tr {
+        font-size: 14px;
+        font-weight: 500;
+        color: $gray;
+        border-spacing: 0 0.2rem;
+        td {
+          padding: 0.5rem;
+          // &:last-child {
+          //   padding-left: 0;
+          // }
+        }
+      }
+    }
+
+    .spn {
+      margin-left: 1rem;
+      width: calc(100% - (400px + 1rem));
+      height: 225px;
+      padding: 2rem;
+      background-color: $fees_l;
+      border-radius: 0.5rem;
+
+      h2 {
+        font-size: 25px;
+        font-weight: 500;
+        color: $gray;
+      }
+
+      h5 {
+        font-size: 18px;
+        font-weight: 500;
+        span{
+            color: $depo;
+        }
+      }
+
+      div {
+        width: 60%;
+        height: 40px;
+        background-color: $impnp1_l;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  thead,
+  tbody,
+  tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  tbody {
+    display: block;
+    overflow: auto;
+    table-layout: fixed;
+    max-height: 410px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .table {
+    border: 0.1px solid $ex_th_l;
+    padding: 0 .5rem ;
+    border-radius: .5rem;
+    margin-top: 2rem;
+    overflow: auto;
+    table {
+      width: 100%;
+      min-width: 920px;
+      margin: 1rem 0;
+    }
+    thead {
+      background-color: $fees_l_h;
+      border-radius: 0.3rem;
+    }
+    th {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: $link;
+      &:first-child {
+        transform: translateX(-3px);
+      }
+    }
+    tr {
+      font-size: 12px;
+      font-weight: 500;
+      color: $gray;
+      border-spacing: 0 0.2rem;
+      text-align: center;
+      padding: .5rem 0;
+
+    }
+  }
+
+  .nodata {
+    background-color: $light;
+    height: 370px;
+    img {
+      height: 300px;
+      border-radius: 50%;
+    }
+    h1 {
+      font-size: 20px;
+      color: $link;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+  }
+}
+
+// ****** Dark mode ******
+
+.reff_d {
+  background-color: $cb_d;
+  nav {
+    background-color: $register_d;
+  }
+  .il{
+    background-color: $fees_d_h !important;
+    h1{
+        color: $impnp1_l !important;
+    }
+  }
+  .js{
+    table{
+        background: $cb_d;
+        border: 0.1px solid $gray;
+        thead{
+            background-color: $fees_d_h;
+            th{
+                color: $light;
+            }
+        }
+
+        td{
+            color: $light;
+        }
+    }
+
+    .spn{
+        background-color: $fees_d_h;
+
+        h2{
+            color: $impnp1_l;
+        }
+
+        h5{
+            color: $light;
+        }
+    }
+  }
+  .impn {
+    h1 {
+      color: $impnp1_l !important;
+    }
+  }
+  h4 {
+    color: $impnp1_l !important;
+  }
+  .table {
+    border: 0.1px solid $gray;
+    border-radius:.5rem;
+    thead{
+        background-color: $fees_d_h;
+        th{
+            color: $light ;
+        }
+    }
+  }
+  td{
+    color: $light;
+  }
+  .nodata {
+    background-color: $cb_d;
+    img {
+      border-radius: 50%;
+    }
+    h1 {
+      color: $impnp1_l;
+    }
+  }
+}
+
+// ******* Responsive *********
+
+@media screen and (max-width : 900px ) {
+  .reff_d , .reff_l{
+    .reff{
+      .boxes{
+      grid-template-columns: repeat(5 , 1fr);
+      }
+      .sca{
+        .sbox , input{
+          width: 50%;
+        }
+      }
+      &> div:first-child {
+        &>div:first-child{
+          align-self: flex-start;
+          width: 45%;
+        }
+        &>div:last-child{
+          padding: 2rem 1rem ;
+          width: 54%;
+          h2{
+            font-size: 12px;
+            padding: .2rem 1rem;
+          }
+        }
+      }
+
+      .js{
+        flex-direction: column;
+        table{
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+        &>div:last-child{
+          margin: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 740px) {
+  .reff_d,.reff_l{
+    .reff{
+      &> div:first-child {
+        flex-direction: column;
+        &>div:first-child{
+          width: 100%;
+        }
+        &>div:last-child{
+          width: 100%;
+          h2{
+            padding: .3rem 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 600px ) {
+  .reff_d, .reff_l{
+    .reff{
+      .boxes{
+        grid-template-columns: repeat(4 , 1fr);
+
+        .box{
+          p{
+            font-size: 12px;
+          }
+          h1{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 560px ) {
+  .reff_d , .reff_l{
+    .reff{
+      &> div:first-child {
+        &>div:last-child{
+          width: 100%;
+          h2{
+            padding: .3rem 1rem;
+          }
+        }
+      }
+      .sca{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: .5rem;
+        .sbox, input{
+          width: 100%;
+        }
+        button{
+          position: relative;
+          left: 100%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 500px ) {
+  .reff_d , .reff_l{
+    .reff{
+      h4{
+        font-size: 15px;
+      }
+      .boxes{
+        grid-template-columns: repeat(3 , 1fr);
+        grid-gap: .5rem;
+        }
+ 
+        &> div:first-child {
+          &>div:last-child{
+            h2{
+            font-size: 12px;
+            }
+            padding: 1rem;
+          }
+        }
+      .js{
+        .spn{
+          padding: 1rem;
+          height: 100%;
+          h2{
+            font-size: 20px;
+          }
+          h5{
+            font-size: 14px;
+          }
+          div{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width : 400px ) {
+  .reff_d , .reff_l{
+    .reff{
+      &> div:first-child {
+        &>div:last-child{
+          width: 100%;
+          padding: 1rem .5rem;
+          h2{
+            font-size: 9px;
+            padding: .3rem .5rem;
+          }
+        }
+      }
+      .sca{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+        .sbox, input{
+          width: 100%;
+        }
+        button{
+          display: block;
+          margin: 0 auto;
+          left: 0;
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 355px ) {
+    .reff_d , .reff_l{
+      .reff{
+        .boxes{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: .5rem;
+          .box{
+            width: 100%;
+          }
+        }
+        .js{
+          .spn{
+            h5{
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+}

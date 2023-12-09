@@ -1,0 +1,78 @@
+@import "../../../Global/Variables.scss";
+
+.nf_d,.nf_l{
+    background-color: $fees_l;
+    nav{
+        background-color: $light;
+      }
+
+      .nf{
+        background-color: $light;
+        height: 700px ; 
+        h1{
+            color: $umt;
+            font-size: 65px;
+        }
+        p{
+            color: $link;
+        }
+        img{
+            width: 100%;
+            margin-top: 3rem;
+        }
+      }
+}
+
+
+// ***** Dark mode ******
+
+.nf_d{
+    background-color: $nbc_d;
+    nav{
+        background-color: $register_d;
+    }
+    p{
+        color: $third !important;
+        a{
+            color: $active_link;
+        }
+    }
+    .nf{
+        background-color: $cb_d ;
+    }
+}
+
+// ******** Responsive *********
+
+@media screen and (max-width:550px){
+    .nf_d,.nf_l{
+        .nf{
+            height: 600px;
+            h1{
+                font-size: 35px;
+            }
+            p{
+                font-size: 14px;
+            }
+            img{
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px){
+    .nf_d,.nf_l{
+        .nf{
+            height: 500px;
+            h1{
+                font-size: 28px;
+            }
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+

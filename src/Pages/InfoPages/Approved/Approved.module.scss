@@ -1,0 +1,76 @@
+@import "../../../Global/Variables.scss";
+
+.app_d,.app_l{
+    background-color: $fees_l;
+    nav{
+        background-color: $light;
+      }
+
+      .app{
+        background-color: $light;
+        height: 700px;
+
+        h1{
+            color: $umt;
+            font-size: 45px;
+        }
+        p{
+            color: $link;
+        }
+        img{
+            width: 500px;
+            margin-top: 1rem;
+        }
+      }
+}
+
+
+// ***** Dark mode ******
+
+.app_d{
+    background-color: $nbc_d;
+    nav{
+        background-color: $register_d;
+    }
+    p{
+        color: $third !important;
+        a{
+            color: $active_link;
+        }
+    }
+    .app{
+        background-color: $cb_d ;
+    }
+}
+
+
+// ******** Responsive *********
+
+@media screen and (max-width:550px){
+    .app_d,.app_l{
+        .app{
+            height: 600px;
+            h1{
+                font-size: 35px;
+            }
+            img{
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px){
+    .app_d,.app_l{
+        .app{
+            height: 500px;
+            h1{
+                font-size: 30px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
+

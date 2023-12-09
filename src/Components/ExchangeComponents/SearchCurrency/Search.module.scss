@@ -1,0 +1,198 @@
+@import "../../../Global/Variables.scss";
+
+.searchcurreny_d,
+.searchcurreny_l {
+  .cover {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .coins {
+    display: grid;
+    grid-template-columns: auto repeat(4 , 1fr) auto;
+    grid-gap: 2px;
+    @media screen and (max-width : 380px) {
+      grid-template-columns: auto repeat(3 , 1fr) auto;
+    }
+
+    .navigate{
+      background-color: transparent;
+      color: $ex_border;
+      border: none;
+      border: 1px solid $ex_border;
+
+      &:hover{
+        border-color: transparent;
+        color: $light;
+        background-color: $bborder;
+      }
+    }
+    button {
+      background-color: transparent;
+      outline: none;
+      padding: 0.1rem 0.8rem;
+      color: $link;
+      border: 1px solid transparent;
+      border-radius: 0.3rem;
+      transition: $t-normal;
+      
+
+      &:hover {
+        // background-color: $btnbg;
+        // color: $light;
+        border: 1px solid $btnbg;
+      }
+    }
+
+    button.active {
+      background-color: $btnbg;
+      color: $light;
+    }
+  }
+
+  .coinSearch {
+    margin: 0.8rem 0;
+    width: 100%;
+    background-color: $insidebox1;
+    color: $link;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+  }
+
+  .c_table {
+    .tbody{
+      max-height: 340px;
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      div{
+        p{
+          text-align: end;
+        }
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .thead,
+    .tr {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) .8fr;
+      font-size: 14px;
+      font-weight: 600;
+      color: $gray;
+
+      div {
+        cursor: pointer;
+      }
+      span > * {
+        position: relative;
+      }
+      span {
+        margin-right: 0.19rem;
+      }
+      span svg:first-child {
+        top: 2px;
+      }
+      span svg:last-child {
+        bottom: 2px;
+      }
+    }
+    .thead {
+      margin: 0.5rem 0;
+      div {
+        justify-content: end;
+
+        .active{
+          color: $btnbg;
+        }
+        &:first-child {
+          justify-content: start;
+        }
+      }
+    }
+
+    .tr {
+      cursor: pointer;
+      p {
+        font-weight: 500;
+        font-size: 12px;
+        margin-bottom: 0.3rem;
+        text-align: flex-end;
+        &:first-child {
+          text-align: start;
+        }
+      }
+    }
+    .pos {
+      color: $bb3;
+    }
+    .neg {
+      color: $neg;
+    }
+  }
+}
+
+// ************* Dark mode ***********
+
+.searchcurreny_d {
+  .coins {
+  .navigate{
+    border-color: $ex_border_d;
+    color: $ex_border_d;
+    &:hover{
+      background-color: $light;
+      color: $link;
+    }
+  }
+    button {
+      color: $light;
+    }
+  }
+  .coinSearch {
+    background-color: $ex_search_dbg;
+    color: $light;
+    &::placeholder {
+      color: $ex_border;
+    }
+  }
+
+  .c_table {
+    .thead,
+    .tr {
+      color: $light;
+    }
+  }
+}
+
+// ********** Functions add ******
+
+@media screen and (max-width: 1050px) {
+  .searchcurreny_d,
+  .searchcurreny_l {
+    position: absolute;
+    top: 10rem;
+    left: 1rem;
+    z-index: 9;
+    width: 350px;
+    box-shadow: 0 2px 30px rgba(179, 179, 179, 0.5);
+    background-color: $light;
+  }
+  .searchcurreny_d {
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .searchcurreny_d,
+  .searchcurreny_l {
+    width: 95%;
+    left: 0.5rem;
+  }
+}

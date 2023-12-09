@@ -1,0 +1,132 @@
+@import "../../../Global/Variables.scss";
+
+.l_buysell,
+.d_buysell {
+  background-color: $buysell_l;
+  padding: 3rem 0;
+  h1,
+  h2 {
+    color: $link;
+  }
+
+  .bsimg{
+    img{
+      width: 100%;
+    }
+  }
+
+
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .boxes {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-gap: 1.5rem;
+
+    .box , .box1 , .box2 {
+      display: flex;
+      align-items: center;
+      width: 250px;
+      height: 90px;
+      background-color: $insidebox1;
+      border-radius: 1rem;
+
+      .p_icon {
+        background-color: $p_iconbg1;
+        width: 23%;
+        height: inherit;
+        font-size: 25px;
+        border-radius: 1rem 0 0 1rem;
+        // color:$light;
+      }
+
+      .inbox{
+        padding-left: 1rem;
+        text-transform: uppercase;
+
+        button{
+            cursor: pointer;
+            background: $p_iconbg1;
+            outline: none;
+            border: 2px solid $bb1;
+            text-transform: uppercase;
+            padding: .1rem .5rem;
+            font-size: 12px;
+            font-weight: 300;
+            border-radius: 3rem;
+        }
+      }
+
+      h2{
+        font-size: 16px;
+        margin-bottom: .5rem;
+        font-weight: 500;
+      }
+    }
+
+    .box1{
+        background-color: $insidebox2;
+        .p_icon {
+            background-color: $p_iconbg2;
+        }
+        button{
+            background: $p_iconbg2 !important;
+            border-color: $bb2 !important;
+        }
+    }
+
+    .box2{
+        background-color: $insidebox3;
+        .p_icon {
+            background-color: $p_iconbg3;
+        }
+        button{
+            background: $p_iconbg3 !important;
+            border-color: $bb3 !important;
+        }
+    }
+  }
+}
+
+@media screen and (max-width : 1100px) {
+  .l_buysell,.d_buysell{
+    .boxes{
+      width: 100%;
+     margin-bottom: 3rem;
+     .box,.box1,.box2{
+      width: 100%;
+     }
+    }
+    .bs{
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width :600px) {
+  .l_buysell,.d_buysell{
+    .boxes{
+      width: 100%;
+      grid-template-columns: 1fr;
+     margin-bottom: 3rem;
+     .box,.box1,.box2{
+      width: 100%;
+     }
+    }
+    .bs{
+      flex-direction: column;
+    }
+  }
+}
+
+// ----- Dark mode --
+
+.d_buysell {
+  background-color: $securedd_c_bg;
+
+  h1{color: $light;}
+}

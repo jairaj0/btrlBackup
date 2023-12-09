@@ -1,0 +1,140 @@
+@import "../../../Global//Variables.scss";
+
+.l_sliders , .d_sliders{
+  margin-top: 5rem !important;
+  // background-color: rgba(204, 204, 204, 0.465);
+  padding: 3rem 0 !important;
+  position: relative;
+
+  .shape1{
+    width: 30px;
+    position: absolute;
+    top: 3rem;
+    left: 1%;
+    transform: rotate(40deg);
+    animation: position-transform 10s linear infinite;
+  }
+
+  @keyframes position-transform {
+    0%{
+      transform: translateX(30px);
+    }
+    30%{
+      transform: translateX(70px) rotate(360deg);
+    }
+    50%{
+      transform: translateY(70px) rotate(-360deg);
+    }
+    70%{
+      transform: translateY(100px) rotate(360deg);
+    }
+    100%{
+      transform: translateX(30px);
+    }
+  }
+
+  h1{
+    text-align: center;
+    color: $link;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+    .swiper-wrapper{
+        transition-timing-function : linear;
+      }
+.perslide{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2rem;
+    position: relative;
+  
+    .pbox{
+      width: 100px;
+      border-radius: 50%;
+      border: 10px solid $bborder;
+  
+      img{
+          width: 100%;
+          border-radius: inherit;
+          border: 5px solid $btnbg;
+      }
+    }
+    .nxt{
+      border-color: $iborder;
+      img{
+        border-color: $iborder1;
+      }
+    }
+    h3{
+      background-color: $bgtext;
+      font-size: 14px;
+      font-weight: 500;
+      color: $link;
+      padding: .1rem 1rem;
+      border-radius: 1rem;
+      position: absolute;
+      top: 100px;
+      text-transform: uppercase ;
+  }
+
+  h3.nxt{
+    background-color: $bgtext1;
+  }
+
+  
+  h2{
+      font-weight: 500;
+      font-size: 18px;
+      color: $link;
+      text-transform: uppercase ;
+      margin-top: 1rem;
+  }
+  
+  a{
+      font-size: 14px;
+      font-weight: 600;
+  }
+  }
+
+}
+
+
+// ----------- Dark mode ------------
+
+.d_sliders{
+  // background-color: rgba(33, 33, 33, 0.465);
+  h1{
+    color: $light;
+  }
+.perslide{
+    .pbox{
+      border: 10px solid $bborder;
+    }
+
+    .nxt{
+      border-color: $iborder;
+      img{
+        border-color: $iborder1;
+      }
+    }
+    h3{
+      background-color: $bgtext;
+  }
+
+  h3.nxt{
+    background-color: $bgtext1;
+  }
+  
+  h2{
+      color: $light;
+  }
+  
+  a{
+      color: $active_link_d;
+  }
+  }
+}
+

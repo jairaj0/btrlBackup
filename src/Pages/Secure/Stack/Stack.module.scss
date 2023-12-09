@@ -1,0 +1,351 @@
+@import "../../../Global/Variables.scss";
+
+.stack_d,
+.stack_l {
+  background-color: $light;
+  nav {
+    background-color: $nbc_l;
+  }
+
+  .ebox{
+    position: relative;
+    .warning_note{
+      padding-left: 0.5rem;
+    }
+  }
+
+  .warning_note {
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    font-size: 14px;
+    color: $neg;
+    bottom: -25px;
+    margin: 0;
+  }
+
+  .stack {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    .impn {
+      h1 {
+        font-size: 25px;
+        font-weight: 500;
+        color: $link;
+      }
+      h2{
+        font-size: 18px;
+        font-weight: 500;
+        color: $gray;
+        margin-top: 1rem;
+      }
+      h3{
+        font-size: 14px;
+        font-weight: 400;
+        color: $gray;
+        margin: .5rem 0;
+      }
+      p {
+        background-color: $impnp1_l;
+        margin: 0.5rem 0;
+        color: $link;
+        font-size: 14px;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        width: 500px;
+        &:nth-child(odd) {
+          background-color: $impnp2_l;
+        }
+      }
+    }
+    .il {
+      background-color: $fees_l;
+      width: 50%;
+      padding: 2rem;
+      border-radius: 1rem;
+      h1 {
+        font-size: 25px;
+        color: $link;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+      h2 {
+        font-size: 14px;
+        font-weight: 400;
+        color: $gray;
+        padding: 0.5rem 2rem;
+        background-color: $impnp1_l;
+        border-radius: 0.5rem;
+
+        button {
+          background: none;
+          border: none;
+          outline: none;
+          font-size: 20px;
+          margin-left: 0.5rem;
+          color: $gray;
+          transition: $t_normal;
+          &:hover {
+            color: $link;
+          }
+        }
+      }
+    }
+    h4 {
+      font-size: 18px;
+      font-weight: 500;
+      color: $link;
+      margin: 1rem 0;
+    }
+
+    .boxes {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      .box {
+        width: 180px;
+        height: 100px;
+        background-color: $impnp1_l;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        p {
+          font-size: 16px;
+          color: $gray;
+        }
+        h1 {
+          font-size: 25px;
+          font-weight: 400;
+          color: $link;
+        }
+        &:nth-child(odd) {
+          background-color: $impnp2_l;
+        }
+      }
+    }
+
+    .sbox,
+    input {
+      width: 400px;
+      font-size: 16px;
+      outline: none;
+      padding: 0.5rem;
+      margin-right: 1rem;
+      border: 1px solid $l_ph;
+      border-radius: 0.5rem;
+      color: $gray;
+      position: relative;
+    }
+    .sbox {
+      padding-right: 1rem;
+      background-color: $light;
+      select {
+        background-color: inherit;
+        width: 100%;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: $gray;
+      }
+    }
+  }
+
+  thead,
+  tbody,
+  tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  tbody {
+    display: block;
+    overflow: auto;
+    table-layout: fixed;
+    max-height: 410px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .table {
+    margin-top: 2rem;
+    overflow: auto;
+    table {
+      width: 100%;
+    min-width: 1200px;
+      margin: 1rem 0;
+    }
+    thead {
+      background-color: $fees_l_h;
+      border-radius: 0.3rem;
+      padding: .5rem 0;
+    }
+    th {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      color: $link;
+      &:first-child {
+        transform: translateX(-3px);
+      }
+    }
+    tr {
+      font-size: 12px;
+      font-weight: 500;
+      color: $gray;
+      border-spacing: 0 0.2rem;
+      text-align: center;
+
+      td{
+        button{
+          background-color: $btnbg;
+          border-radius: .2rem;
+          font-size: 12px;
+          border: none;
+          color: $light;
+          padding: .2rem .3rem;
+        }
+      }
+    }
+  }
+
+  .nodata {
+    background-color: $light;
+    height: 370px;
+    img {
+      height: 300px;
+      border-radius: 50%;
+    }
+    h1 {
+      font-size: 20px;
+      color: $link;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+  }
+}
+
+// ****** Dark mode ******
+
+.stack_d {
+  background-color: $cb_d;
+  nav {
+    background-color: $register_d;
+  }
+  table{
+    tr td{
+      color: $nbc_l;
+    }
+  }
+  .il{
+    background-color: $fees_d_h !important;
+    h1{
+        color: $impnp1_l !important;
+    }
+  }
+ 
+  .impn {
+    h1,h2 {
+      color: $impnp1_l !important;
+    }
+    h3{
+        color: $light !important;
+    }
+  }
+  h4 {
+    color: $impnp1_l !important;
+  }
+  .table {
+    border: 0.1px solid $gray;
+    padding: 0 .5rem ;
+    border-radius:.5rem;
+    thead{
+        background-color: $fees_d_h;
+        th{
+            color: $light ;
+        }
+    }
+  }
+  .nodata {
+    background-color: $cb_d;
+    img {
+      border-radius: 50%;
+    }
+    h1 {
+      color: $impnp1_l;
+    }
+  }
+}
+
+// ******* responsive **********
+
+@media screen and (max-width : 900px) {
+  .stack_d,.stack_l{
+    .stack{
+      .sca{
+        .sbox , input{
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 560px) {
+  .stack_d,.stack_l{
+    .stack{
+      .table{
+        margin-top: 1rem;
+      }
+      .impn{
+        p{
+          width: 100%;
+        }
+      }
+      .sca{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: .5rem;
+        .sbox, input{
+          width: 100%;
+        }
+        button{
+          position: relative;
+          left: 100%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 400px) {
+  .stack_d,.stack_l{
+    .stack{
+      .sca{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+        .sbox, input{
+          width: 100%;
+        }
+        button{
+          display: block;
+          margin: 0 auto;
+          left: 0;
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+

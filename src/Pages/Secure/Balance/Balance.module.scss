@@ -1,0 +1,339 @@
+@import "../../../Global/Variables.scss";
+
+.bal_d,
+.bal_l {
+  background-color: $light;
+  nav {
+    background-color: $nbc_l;
+  }
+
+  .bal_wrapper{
+    overflow: auto;
+  }
+
+  .container{
+    padding: 0 1rem;
+
+    .note{
+      font-size: 14px;
+      color: $fail;
+      font-weight: 500;
+      margin-bottom: 0;
+      margin-left: 2rem;
+      margin-top: 2rem;
+      display: none;
+  }
+  }
+
+  .bal {
+    background-color: $fees_l;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+
+    .depositBox , .widthdrawBox{
+        width: 60%;
+        min-width: 880px;
+        max-width: 880px;
+        padding-bottom: 2rem;
+        position: fixed;
+        background-color: $light;
+        // top: 20px;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+        // transform: translate(-50%);
+        transform: translate(-50% , -50%);
+        border-radius: 1rem;
+        box-shadow: 0 15px 30px rgb(85 85 85 / 40%);
+
+        ._nav{
+          padding: .5rem 1rem;
+          background-color: $btnbg;
+          border-radius: 1rem 1rem 0 0;
+        }
+
+        h1{
+          font-size: 20px;
+          font-weight: 500;
+          color: $light;
+        }
+
+        button.close{
+          background: none;
+          outline: none;
+          border: none;
+          font-size: 25px;
+          color: $light;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    }
+
+    .widthdrawBox{
+      width: 500px;
+      min-width: fit-content;
+
+      @media screen and (max-width : 500px ) {
+        width: 97vw;
+      }
+    }
+
+    .filters {
+      margin: 1rem;
+
+      h3 {
+        font-size: 16px;
+        color: $gray;
+        font-weight: 500;
+      }
+
+      .sbox {
+        padding-right: 0.2rem;
+        background-color: $fees_l_h;
+        margin-left: 0.5rem;
+        
+        select {
+          background-color: transparent;
+          color: $gray;
+          padding: 0.2rem;
+          padding-right: 1.3rem;
+          border: none;
+          outline: none;
+          display: flex;
+         
+        }
+      }
+
+      .tg_c,.tru_tg_c {
+        width: 50px;
+        height: 25px;
+        // background-color: $so_sb_l_a;
+        background-color: $fees_l_h;
+        margin-right: 1rem;
+        margin-left: 0.5rem;
+        border-radius: 3rem;
+        padding: 0.2rem;
+        cursor: pointer;
+
+        .tg_sc,
+        .tru {
+          width: 20px;
+          height: 20px;
+          // background-color: $btnbg;
+          background-color: $l_ph;
+          border-radius: 50%;
+          transition: $t_normal;
+        }
+
+        .tru {
+          background-color: $btnbg;
+          transform: translateX(23px);
+        }
+      }
+
+      // .tru_tg_c{
+      //   // background-color: $umt;
+      // }
+    }
+  }
+  thead,
+  tbody,
+  tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  thead {
+    background-color: $fees_l_h;
+    padding-left: 0.5rem;
+    border-radius: inherit;
+  }
+
+  tbody {
+    display: block;
+    overflow: auto;
+    table-layout: fixed;
+    height: 750px;
+  }
+
+  table {
+    width: 100%;
+    min-width: 1265px;
+    background-color: $fees_l;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    th {
+      text-align: left;
+      font-size: 14px;
+      font-weight: 500;
+      color: $link;
+      &:first-child {
+        transform: translateX(-3px);
+      }
+    }
+    tr {
+      font-size: 14px;
+      font-weight: 500;
+      color: $gray;
+      border-spacing: 0 0.2rem;
+      td {
+        padding: 1rem;
+        border-bottom: 0.1px solid $l_ph;
+        height: 64px ;
+        &:last-child {
+          padding-left: 0;
+        }
+        img {
+          width: 30px;
+          margin-right: 0.5rem;
+        }
+        button {
+          font-size: 14px;
+          font-weight: 500;
+          color: $light;
+          background-color: $fail;
+          padding: 0.3rem 1rem;
+          border-radius: 0.5rem;
+          border: none;
+          outline: none;
+
+          &:first-child {
+            background-color: $depo;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ****** Dark mode ******
+
+.bal_d {
+  background-color: $cb_d;
+  nav {
+    background-color: $register_d;
+  }
+
+  .bal {
+    background-color: $cb_d !important;
+    border: 0.1px solid $ex_border_d;
+
+    .depositBox , .widthdrawBox{
+      background-color: $register_d;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.273);
+    }
+
+    h3{
+      color: $third !important;
+    }
+  }
+
+  table {
+    background-color: $cb_d !important;
+
+    thead {
+      background-color: $fees_d_h !important;
+      th {
+        color: $light !important;
+      }
+    }
+
+    td {
+      border-color: $ex_border_d !important;
+      color: $third;
+    }
+  }
+}
+
+
+// ********* Responsive ************
+
+@media screen and (max-width:910px){
+.bal_d,.bal_l {
+  .bal{
+    .depositBox{
+      min-width: 97vw;
+    }
+  }
+}
+}
+
+@media screen and (max-width:1324px){
+  .bal_d,
+  .bal_l {
+    .container .note{
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width:520px){
+  .bal_d,
+  .bal_l {
+    .container {
+      .bal{
+        padding: 0;
+      }
+      .filters{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .tg_c{
+          width: 30px;
+          height: 18px;
+          .tg_sc,
+        .tru {
+            width: 12px;
+            height: 12px;
+          }
+          .tru{
+            transform: translateX(11px);
+          }
+        }
+        h3{
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:450px){
+  .bal_d,
+  .bal_l {
+    .container {
+      .note{
+        margin-left: 0;
+      }
+      .filters{
+        align-items: flex-start;
+        flex-direction: column;
+        h3{
+          font-size: 16px;
+        }
+        .tg_c {
+          width: 50px;
+          height: 25px;
+  
+          .tg_sc,
+          .tru {
+            width: 20px;
+            height: 20px;
+          }
+          .tru {
+            transform: translateX(23px);
+          }
+        }
+
+        &>div:first-child{
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

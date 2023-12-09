@@ -1,0 +1,31 @@
+.heroimage{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    width: 100%;
+
+    @media screen and (max-width:1200px){
+      margin: auto;
+      width: 100%;
+    }
+    
+    .floatingImg{
+        position: absolute;
+        top: -30px;
+        left: 0px;
+        right: 0px;
+        animation: moveTopBounce 3s linear infinite;
+    }
+}
+
+@keyframes moveTopBounce {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(0px, 15px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}

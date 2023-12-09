@@ -1,0 +1,76 @@
+@import "../../Global/Variables.scss";
+
+.newsD_d,.newsD_l{
+    nav{
+        background-color: $fees_l;
+      }
+      .newsd{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-align: justify;
+
+        .title{
+            width: 100%;
+            text-align: center;
+            margin: 1rem 0;
+        }
+        img{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+        .back{
+            font-size: 30px;
+            color: $link;
+            transition: $t_normal;
+            &:hover{
+                color: $btnbg;
+            }
+        }
+        h1{
+            font-size: 25px;
+            font-weight: 600;
+            color: $link;
+        }
+        p{
+            color: $link;
+        }
+        button{
+            width: 120px;
+            height: 30px;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: .3rem;
+        }
+      }
+ }
+
+//  *********** dark mode *****
+
+.newsD_d{
+    background-color: $cb_d;
+    nav{
+        background-color: $register_d;
+    }
+    .newsd{
+        h1,.back{
+            color: $light;
+        }
+            color: $light;
+    }
+}
+
+// ************* Responsive *************
+
+@media screen and (max-width : 800px) {
+    .newsD_d , .newsD_l{
+        .newsd{
+            h1{
+                width: 100%;
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+    }
+}
+

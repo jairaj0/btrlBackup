@@ -1,0 +1,201 @@
+@import "../../../Global/Variables.scss";
+
+.oo_d , .oo_l{
+    background-color: $light;
+    button{
+        background-color: transparent;
+        font-size: 14px;
+        padding: .2rem 1rem;
+        margin-right: 1rem;
+        color: $link;
+        border: none;
+        outline: none;
+        border-radius: .2rem;
+        font-weight: 500;
+        transition: $t_normal;
+    }
+
+    input{
+        font-size: 14px;
+        width: 200px;
+        font-weight: 500;
+        padding: .2rem 0;
+        padding-left: .5rem;
+        background-color: $insidebox1;
+        color: $gray;
+        border: none;
+        outline: none;
+        &::placeholder{
+            color: $l_ph;
+        }
+    }
+
+    button.active, button:hover{
+        background-color: $btnbg;
+        color: $light;
+    }
+
+
+    thead, tbody, tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+      }
+      
+      tbody {
+        display: block;
+        overflow: auto;
+        table-layout: fixed;
+        max-height: 410px;
+            -ms-overflow-style: none;  
+            scrollbar-width: none;  
+        &::-webkit-scrollbar { 
+            display: none;
+        }
+      }
+    
+      table{
+        width: 100%;
+        margin: 1rem 0;
+        th{
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: $ex_th_l;
+            &:first-child{
+                transform: translateX(-3px);
+            }
+        }
+        tr{
+            font-size: 12px;
+            font-weight: 500;
+            color: $gray;
+            border-spacing: 0 .2rem;
+            text-align: center;
+            td{
+                button{
+                    margin: 0;
+                    font-size: 12px;
+                    border: 1px solid $l_ph;
+                    padding: .1rem .5rem;
+
+                    &:hover{
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+      }
+
+      .nodata{
+        height: 100%;
+        img{
+            height: 300px;
+            border-radius: 50%;
+        }
+        h1{
+            font-size: 20px;
+            color: $link;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+      }
+}
+
+// ********** Dark mode **********
+
+.oo_d{
+    button{
+        color: $light;
+    }
+    tr td{
+        color: $light;
+    }
+    .nodata{
+        img{
+            border-radius: 50%;
+        }
+        h1{
+            color: $light;
+            margin-top: 1rem;
+        }
+    }
+}
+
+// ******** Responsive ********
+
+@media screen and (max-width:1330px){
+    .oo_d , .oo_l{
+        grid-row-start: 4;
+        grid-column: 1 / span 3;
+    }
+  }
+
+  @media screen and (max-width:1200px){
+    .oo_d , .oo_l{
+      grid-row-start: 4;
+      grid-column: 2 / span 2;
+    }
+  }
+
+  @media screen and (max-width:1050px){
+    .oo_d , .oo_l{
+        grid-row-start: 4;
+      grid-column: 1 / span 3;
+    }
+  }
+
+  @media screen and (max-width:740px){
+    .oo_d , .oo_l{
+        grid-row-start: 5;
+        grid-column: 1 / span 3;
+    }
+  }
+
+  @media screen and (max-width:580px){
+    .oo_d , .oo_l{
+        padding: .5rem !important;
+        button, input{
+            font-size: 12px;
+        }
+        button{
+            margin-right: .5rem;
+        }
+        table{
+            th{
+                font-size: 12px !important;
+            }
+        }
+    }
+  }
+  @media screen and (max-width:600px){
+    .oo_d , .oo_l{
+        .tableBox{
+            width: 100%;
+            overflow: auto;
+        }
+        table{
+            width: 500px;
+        }
+        input{
+            width: 120px;
+        }
+    }
+  }
+  @media screen and (max-width:435px){
+    .oo_d , .oo_l{
+        padding: .5rem !important;
+        button, input{
+            font-size: 9px;
+        }
+        button{
+            margin-right: .2rem;
+            padding: .1rem .3rem;
+        }
+        table{
+            th{
+                font-size: 12px !important;
+            }
+        }
+    }
+  }

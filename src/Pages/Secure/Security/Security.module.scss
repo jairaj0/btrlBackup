@@ -1,0 +1,200 @@
+@import "../../../Global/Variables.scss";
+
+.secu_d,
+.secu_l {
+  background-color: $fees_l;
+  nav {
+    background-color: $light;
+  }
+
+  .title {
+    font-size: 30px;
+    color: $btnbg;
+    font-weight: 600;
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    outline: 5px solid $fees_l;
+    background-color: $fees_l;
+    width: 343px;
+    border: 2px solid $ex_border;
+    border-radius: 3rem;
+    padding: .5rem 1rem;
+    span {
+      margin-left: 1rem;
+      font-size: 20px;
+    }
+
+    @media screen and (max-width : 400px) {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: .5rem;
+      font-size: 18px;
+      top: 3rem;
+      span{
+        font-size: 12px;
+        margin-left: .5rem;
+      }
+    }
+  }
+
+  .secu {
+    padding: 2rem 0;
+    display: flex;
+    position: relative;
+    min-height: 700px;
+    @media screen and (max-width : 500px) {
+      min-height: 500px;
+    }
+    ._container {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      width: 100%;
+      border: 2px solid $ex_border;
+      border-radius: 0.5rem;
+      padding: 2rem;
+
+      .box {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (max-width : 1023px) {
+          width: 100%;
+        }
+
+        .title2{
+            font-size: 20px;
+            font-weight: 600;
+            color: $umt;
+            @media screen and (max-width : 400px) {
+              font-size: 18px;
+            }
+        }
+        .note{
+            color: $so_sb_l_a;
+            margin: 1rem 0;
+
+            @media screen and (max-width : 400px) {
+              font-size: 14px;
+            }
+        }
+        .qrcode{
+            margin: 1rem 0;
+            height: 250px;
+            background-color: red;
+        }
+        .n2{
+            margin: 1rem 0;
+            @media screen and (max-width : 400px) {
+              font-size: 14px;
+            }
+        }
+
+        input , button{
+            width: 100%;
+            margin: 1rem 0;
+            margin-top: 2rem;
+            font-size: 16px;
+            background-color: transparent;
+            border: 1px solid $btnbg;
+            padding: .5rem 1rem;
+            outline: none;
+            border-radius: 3rem;
+            @media screen and (max-width : 400px) {
+              span{
+                font-size: 12px !important;
+              }
+            }
+        }
+        p,h4{
+            color: $link;
+            @media screen and (max-width : 400px) {
+              font-size: 14px;
+            }
+        }
+
+        button{
+            background-color: $btnbg;
+            color: $light;
+            margin-top: 1rem;
+            transition: $t_normal;
+            font-size: 22px;
+            span{
+                font-size: 16px;
+                margin-left: .5rem;
+            }
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+
+        .twobtns{
+            width: 100%;
+            margin-top: 1rem;
+            @media screen and (max-width : 600px) {
+              flex-direction: column;
+            }
+            button{
+                width: 50%;
+                background-color: $bgtext1;
+                border: none;
+                border-radius: 3rem 0 0 3rem;
+                @media screen and (max-width : 600px) {
+                  border-radius: 3rem !important;
+                  width: 100%;
+                }
+            }
+            button:last-child{
+                background-color: $btn1color;
+                border-radius: 0 3rem 3rem 0;
+                @media screen and (max-width : 600px) {
+                  margin-top: 0;
+                }
+            }
+        }
+      }
+      .twov {
+        width: 40%;
+        @media screen and (max-width : 1023px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// ********* Dark mode *********
+
+.secu_d {
+  background-color: $nbc_d;
+  nav {
+    background-color: $register_d;
+  }
+
+  ._container{
+    border-color: $ex_border_d !important;
+  }
+  .title {
+    color: $active_link_d ;
+    border-color: $ex_border_d ;
+    background-color: $nbc_d;
+    outline-color: $nbc_d;
+  }
+
+  .box {
+
+    .note{
+        color: $so_sb_l_a !important;
+    }
+    p,h4,input{
+        color: $light !important;
+    }
+}
+}

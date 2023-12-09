@@ -1,0 +1,277 @@
+@import "../../../Global/Variables.scss";
+
+// *************** Light mode ************* 
+
+.nav , .d_nav{
+    width: 100%;
+    height: 80px;
+
+    .loginNav{
+        ._boxbg{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 9;
+        }
+        .menud{
+            margin-left: 1rem;
+            position: relative;
+            .box{
+                padding: 1rem;
+                border-radius: .5rem;
+                background-color: $btnbg;
+                width: 230px;
+                position: absolute;
+                right: 0;
+                top: 2rem;
+                box-shadow: 0 15px 30px rgba(85, 85, 85, 0.443);
+                z-index: 10;
+                
+                a{
+                    color: $light;
+                    font-weight: 500;
+                    margin: .5rem 0;
+                    transition: $t_normal;
+                    display: block !important;
+
+                    &:hover{
+                        color: $active_link_d;
+                    }
+                }
+            }
+            button{
+                background: none;
+                border: none;
+                font-size: 16px;
+                font-weight: 600;
+                color: $so_sb_l_a !important;
+                transition: $t_normal;
+                span{
+                    font-size: 12px;
+                    margin-left: .2rem;
+                }
+            }
+
+            button:first-child{
+                color: $link !important;
+        }
+        }
+    }
+
+    .logo{
+        width: 150px;
+    }
+    .navlinks{
+        margin-left: 1rem;
+    }
+
+
+    .navlink{
+        margin-left: 1rem;
+        color: $link;
+        transition: $t-normal;
+        font-weight: 600;
+
+        &:hover{
+            color: $active_link;
+        }
+    }
+
+
+
+    .active_nav_link{
+        color: $active_link;
+    }
+    .mode{
+        background: none;
+        outline: none;
+        border: none;
+        font-size: 25px;
+        margin: 0 2rem;
+        color: $l_mode;
+    }
+
+    .wts{
+        font-size: 20px;
+        padding: .8rem;
+        background-color: $btnbg;
+        color: $light;
+        border-radius: 3rem;
+        cursor: pointer;
+    }
+
+    .menubar{
+        width: 25px;
+        height: 20px;
+        position: relative;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        margin-left: 1rem;
+      }
+      
+      .menubar span{
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: $link;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+      }
+      
+      
+      /* Icon 3 */
+      
+      .menubar span:nth-child(1) {
+        top: 0px;
+      }
+      
+      .menubar span:nth-child(2),.menubar span:nth-child(3) {
+        top: 10px;
+      }
+      
+      .menubar span:nth-child(4) {
+        top: 20px;
+      }
+      
+      .menubar.open span:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+      
+      .menubar.open span:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      
+      .menubar.open span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      
+      .menubar.open span:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+      
+
+    .menubar{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+    .nav ,.d_nav{
+        .loginNav{
+            .navlinks{
+                display: flex;
+            }
+            .rightnav{
+                .navlink{
+                    display: none;
+                }
+            }
+            .menubar{
+                display: block;
+            }
+            .wts{
+                display: none;
+            }
+            .menud{
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1050px){
+    .nav,.d_nav{
+        button{
+            margin-left: 1rem !important;
+        }
+        .mode{
+            margin: 0 1rem;
+        }
+    }
+  }
+
+  @media screen and (max-width:900px){
+    .nav,.d_nav{
+        .navlinks{
+            display: none;
+        }
+        .rightnav{
+            button, a{
+                display: none;
+            }
+            .mode{
+                display: flex;
+            }
+            .menud button{
+                display: flex !important;
+            }
+        }
+
+        .menubar{
+            display: block;
+        }
+    }
+  }
+  @media screen and (max-width:696px) {
+    .nav ,.d_nav{
+        .loginNav{
+            .navlinks{
+                display: none;
+            }
+        }
+    }
+}
+
+// *************** Dark mode ************* 
+
+.d_nav{
+        .navlink{
+            color: $light !important;
+
+            &:hover{
+                color: $active_link_n !important;
+            }
+        }
+        .loginNav{
+            .menud{
+                button{
+                    color: $light;
+                }
+                button:first-child{
+                    color: $light !important;
+            }
+            }
+        }
+
+        .active_nav_link{
+            color: $active_link_n !important;
+        }
+    .mode{
+        color: $light;
+    }
+    .wts{
+        background-color: $btnbg;
+        color: $light;
+    }
+    .menubar span{
+        background: $light;
+    }
+}
